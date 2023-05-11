@@ -5,18 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  
+  <title>Login | Sign Up</title>
 </head>
 <body>
-  <center>
+  <h1>Login</h1>
     <div class="form-container">
-      <form action="post">
+      <form method="post">
+        USERNAME
          <input type="text" name="Username" id="userNameTF" placeholder="Enter your Username" required>
-         
+         PASSWORD
           <input type="password" name="Password" id="passWordTF" placeholder="Enter your Password" required>
-          <input type="submit" value="login">
+          <i class="far fa-eye" id="togglePassword" style="margin-left: -30; cursor: pointer;"></i>
+          <input type="submit" value="login" id="loginBtn">  
+          <input type="submit" value="Sign Up as Guest" id="SignUpBtn" onclick="">
       </form>
-</center>
+
     </div>
+    <script src="Js1.js"></script>
 </body>
-</html>
+</html> 
