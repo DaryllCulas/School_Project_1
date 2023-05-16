@@ -7,11 +7,14 @@ h2 {
 html, body {
   margin: 0;
   height: 100%;
-  background-color: whitesmoke;
+  background-image: url(./RetrocadeWallpaper.gif);
+  
+  background-size: cover;
+ 
 }
 
 * {
-  font-family: "Raleway";
+  
   box-sizing: border-box;
   font-family: 'PressStart2P-Regular',sans-serif;
 }
@@ -26,15 +29,37 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #00BAF0;
-  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+  background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%);
   color: white;
   height: 50px;
-  padding: 1em;
+  padding: 2em; 
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+ 
+
+    
 }
+
+/*---------------------Header Logo-----------------------------*/
 #logo {
     font-size: 20pt;
+
 }
+
+#logo a {
+    color: white;
+    text-decoration: none;
+   
+}
+#logo a:hover {
+    color: black;
+    background-color: rgb(197, 95, 197);
+    padding: 10px 10px;
+    transition: 0.6s;
+}
+
+/*-------------------------Navigation Menu lists-------------------------------*/
 .menu {
   display: flex;
   flex-direction: row;
@@ -74,7 +99,7 @@ html, body {
   border-radius: 2px;
 }
 
-.menu-button::before {
+.menu-button::before { position: fixed;
   content: '';
   margin-top: -8px;
 }
@@ -103,7 +128,7 @@ html, body {
     display: flex;
   }
   .menu {
-    position: absolute;
+   position: absolute;
     top: 0;
     margin-top: 50px;
     left: 0;
@@ -133,8 +158,69 @@ html, body {
     width: 100%;
     color: white;
     background-color: #222;
+    
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
+}
+/*-----------------Menu lists Hover effects ---------------------------------------*/
+
+.menu li a {
+   text-decoration: none;
+   color: white;
+   border-radius: 10px;
+
+   
+}
+.menu li a:hover, .menu li a.active {
+    background-color: rgb(197, 95, 197);
+    transition: 0.6s;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration: underline;
+  
+}
+/*-------------------------------------------------------------*/
+
+/*-----------------------------------BODY-----------------------------------------------------*/
+#Home {
+    width: 80%;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 2;
+
+}
+
+#About {
+   
+    width: 80%;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 2;
+}
+#Services {
+    width: 80%;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 2; 
+}
+#Testimonies {
+    width: 80%;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 2; 
 }
