@@ -36,7 +36,7 @@ html, body {
   z-index: 999;
   position: fixed;
   width: 100%;
- 
+    border: 2px solid linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
 
     
 }
@@ -193,6 +193,7 @@ html, body {
     opacity: 0.8;
     text-align: center;
     line-height: 2;
+    border-radius: 25px;
 
 }
 
@@ -205,6 +206,7 @@ html, body {
     opacity: 0.8;
     text-align: center;
     line-height: 2;
+    border-radius: 25px;
 }
 #Services {
     width: 80%;
@@ -214,6 +216,7 @@ html, body {
     opacity: 0.8;
     text-align: center;
     line-height: 2; 
+    border-radius: 25px;
 }
 #Testimonies {
     width: 80%;
@@ -223,4 +226,15 @@ html, body {
     opacity: 0.8;
     text-align: center;
     line-height: 2; 
+    border-radius: 25px;
+}
+#Contact {
+    width: 80%;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 2; 
+    border-radius: 25px;
 }
