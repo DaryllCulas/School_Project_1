@@ -1,4 +1,4 @@
-
+/*----------------ScrollSpy--------------------------------*/
     // Get all section links
     const sectionLinks = document.querySelectorAll('.section');
 
