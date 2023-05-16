@@ -40,7 +40,7 @@ html, body {
   border: 2px solid linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
   
 
-  
+
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 10.5em);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
@@ -201,6 +201,7 @@ html, body {
     border-radius: 10px;
     text-decoration: underline;
     font-weight: bold;
+    
     
 }
 /*-------------------------------------------------------------*/

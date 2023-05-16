@@ -13,6 +13,7 @@
         if (target.offsetTop <= scrollPosition && target.offsetTop + target.offsetHeight > scrollPosition) {
           // Add active class to the current section link
           link.classList.add('active');
+          
         } else {
           // Remove active class from the other section links
           link.classList.remove('active');
