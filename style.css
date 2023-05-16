@@ -38,8 +38,27 @@ html, body {
   position: fixed;
   width: 100%;
   border: 2px solid linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
+  
 
+  
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 10.5em);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
     
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 
 /*---------------------Header Logo-----------------------------*/
