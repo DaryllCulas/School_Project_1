@@ -36,7 +36,7 @@ html, body {
   z-index: 999;
   position: fixed;
   width: 100%;
-    border: 2px solid linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
+ border: 2px solid linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
 
     
 }
@@ -180,7 +180,7 @@ html, body {
     padding: 5px 15px;
     border-radius: 10px;
     text-decoration: underline;
-  
+    
 }
 /*-------------------------------------------------------------*/
 
