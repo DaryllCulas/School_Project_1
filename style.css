@@ -217,7 +217,7 @@ html, body {
   bottom: 0;
   left: 0;
   background-color:rgb(238, 118, 208);
-  box-shadow: 3px 10px 10px 3px rgb(238, 118, 208);
+  box-shadow: 2px 5px 5px 2px rgb(238, 118, 208);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 
