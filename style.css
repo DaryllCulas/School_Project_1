@@ -1,8 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-h2 {
-  vertical-align: center;
-  text-align: center;
-}
+
 
 html, body {
   margin: 0;
@@ -77,6 +73,7 @@ html, body {
     text-decoration: 2px underline;
     padding: 10px 10px;
     transition: 0.6s;
+    text-shadow: 3px 7px 3px black;
 }
 
 /*-------------------------Navigation Menu lists-------------------------------*/
@@ -143,6 +140,8 @@ html, body {
   transform: rotate(-405deg);
 }
 
+/*-----------------CSS Media Queries here------------------------------------*/
+
 @media (max-width: 700px) {
   .menu-button-container {
     display: flex;
@@ -201,7 +200,27 @@ html, body {
     border-radius: 10px;
     text-decoration: underline;
     font-weight: bold;
-    
+    text-shadow: 5px 7px 5px black;
+
+}
+
+.menu li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom-left;
+}
+.menu li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:rgb(238, 118, 208);
+  box-shadow: 3px 10px 10px 3px rgb(238, 118, 208);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+
 }
 /*-------------------------------------------------------------*/
 
