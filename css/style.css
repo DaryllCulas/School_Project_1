@@ -100,7 +100,7 @@ hr {
 #menu.navbar-default .navbar-nav > li > a:hover {
 	color: black;
 	background-color: #70ad47;
-	border-radius: 3px;
+	border-radius: 3	px;
 }
 .on {
 	background-color: #333 !important;
@@ -239,38 +239,38 @@ header .intro-text {
 	line-height: 24px;
 	margin-top: 20px;
 }
-/* Services Section */
-#services {
+/* lifeITS Section */
+#lifeITS {
 	padding: 120px 0;
 	background: #6aaf08;
 }
-#services .service-media {
+#lifeITS .service-media {
 	margin: 10px;
 }
-#services .service-media img {
+#lifeITS .service-media img {
 	position: relative;
 	width: 225px;
 	height: 225px;
 	border-radius: 50%;
 	border: 10px solid rgba(255,255,255,0.1);
 }
-#services .service-desc {
+#lifeITS .service-desc {
 	margin: 10px 10px 40px;
 	text-align: center;
 }
-#services h2 {
+#lifeITS h2 {
 	color: #fff;
 }
-#services h3 {
+#lifeITS h3 {
 	color: #fff;
 	font-size: 24px;
 	font-weight: 400;
 	padding: 5px 0;
 }
-#services p {
+#lifeITS p {
 	color: rgba(255,255,255,0.9);
 }
-#services hr {
+#lifeITS hr {
 	background: rgba(255,255,255,0.6);
 }
 /* Portfolio Section */
