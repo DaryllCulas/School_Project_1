@@ -169,10 +169,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .intro .overlay {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,70ad47+100&0.6+0,0.4+100 */
-	background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#6670ad47', GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); 
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); 
+	background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#6670ad47', GradientType=0 ); 
 }
 .intro .fa {
 	font-size: 94px;
@@ -243,6 +243,7 @@ header .intro-text {
 #lifeITS {
 	padding: 120px 0;
 	background: #6aaf08;
+	
 }
 #lifeITS .service-media {
 	margin: 10px;
@@ -273,8 +274,8 @@ header .intro-text {
 #lifeITS hr {
 	background: rgba(255,255,255,0.6);
 }
-/* Portfolio Section */
-#portfolio {
+/* activities Section */
+#activities {
 	padding: 100px 0;
 	background: #f6f6f6;
 }
@@ -379,27 +380,7 @@ ol.type li a:hover {
 .hover-bg:hover .hover-text {
 	opacity: 1;
 }
-/* Testimonials Section */
-#testimonials {
-	background: #444 url(../img/testimonials-bg.jpg) center center no-repeat fixed;
-	background-size: cover;
-}
-#testimonials .overlay {
-	padding: 120px 0;
-	background: rgba(106, 175, 8, 0.85);
-}
-#testimonials h2 {
-	color: #fff;
-}
-#testimonials hr {
-	background: rgba(255,255,255,0.6);
-}
-#testimonial p {
-	color: #fff;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 32px;
-}
+
 .owl-theme .owl-controls .owl-page span {
 	display: block;
 	width: 12px;
