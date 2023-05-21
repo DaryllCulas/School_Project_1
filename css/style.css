@@ -166,7 +166,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	display: table;
 	width: 100%;
 	padding: 0;
-	background: url('/img/Bacoor-Campus-scaled.jpg') top center no-repeat;
+	background: url(../img/Bacoor-Campus-scaled.jpg) top center no-repeat;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
