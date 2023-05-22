@@ -25,15 +25,15 @@
     }
     
     .close {
-      color: #aaa;
+      color: #000000;
       float: right;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
     }
     
     .close:hover,
     .close:focus {
-      color: black;
+      color: rgb(156, 21, 21);
       text-decoration: none;
       cursor: pointer;
     }
@@ -88,6 +88,7 @@
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.9s
 }
+
 
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)} 
