@@ -8,27 +8,13 @@ document.addEventListener("DOMContentLoaded", function() {
     var modal = document.createElement("div");
     modal.id = "loginModal";
     modal.classList.add("modal");
-
     var modalContent = document.createElement("div");
     modalContent.classList.add("modal-content");
-
     var closeBtn = document.createElement("span");
     closeBtn.classList.add("close");
     closeBtn.innerHTML = "&times;";
-
     var heading = document.createElement("h2");
     heading.textContent = "Login Form";
-
-    // Create the img element
-    var img = document.createElement("img");
-    img.src = "LoginForm/person.jpg";
-    img.alt = "Login_icon";
-    img.height = "100px";
-
-    // Append the img element to a parent element in the DOM
-    var parentElement = link.parentElement;
-    parentElement.appendChild(img);
-
     var form = document.createElement("form");
     var usernameLabel = document.createElement("label");
     usernameLabel.setAttribute("for", "username");
