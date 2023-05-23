@@ -89,16 +89,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function for username and password trimming
     submitBtn.addEventListener("click", function(event){
      var usernameInput = document.getElementById('username').value;
+     var passwordInput = document.getElementById('password').value;
 
      var trimmedusernameInput = usernameInput.trim();
+     var trimmedpasswordInput = passwordInput.trim();
 
      if(trimmedusernameInput === "") {
         usernameSpan.style.display = "block";
         event.preventDefault(); //Prevent Default Submission
      }
      else {
-      usernameSpan.style.display = "none";
+        usernameSpan.style.display = "none";
      }
+
+     if(trimmedpasswordInput === "") {
+        passwordSpan.style.display = "block";
+        event.preventDefault();
+     }
+     else {
+        passwordSpan.style.display = "none";
+     }
+
+
+
 
       
     });
