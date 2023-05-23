@@ -55,7 +55,7 @@
       
     }
     /* Set a style for all buttons */
-    input[type="submit"] {
+    input[type="button"] {
       background-color: #039b42;
       color: white;
       padding: 14px 20px;
@@ -65,7 +65,7 @@
       width: 100%;
       border: 2px solid black;
     }
-    input[type="submit"]:hover {
+    input[type="button"]:hover {
       background-color: yellow;
       color: #000000;
     }
@@ -80,6 +80,10 @@
     h2 {
       text-align: center;
       font-weight: bolder;
+    }
+
+    span {
+      color: red;
     }
 
 

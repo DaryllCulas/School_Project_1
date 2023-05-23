@@ -32,18 +32,33 @@ document.addEventListener("DOMContentLoaded", function() {
     passwordInput.setAttribute("id", "password");
     passwordInput.setAttribute("name", "password");
 
+        // Create the first span element
+    var usernameSpan = document.createElement("span");
+    usernameSpan.textContent = "Please fill up your username";
+    usernameSpan.style.display = "none";
+
+    // Create the second span element
+    var passwordSpan = document.createElement("span");
+    passwordSpan.textContent = "Please fill up your Password";
+    passwordSpan.style.display = "none";
+
+
     var submitBtn = document.createElement("input");
-    submitBtn.setAttribute("type", "submit");
+    submitBtn.setAttribute("type", "button");
     submitBtn.setAttribute("value", "Login");
 
     // Append the elements to the modal
     form.appendChild(usernameLabel);
     form.appendChild(usernameInput);
     form.appendChild(document.createElement("br"));
+    // Append the spans to the document body
+    form.appendChild(usernameSpan);
     form.appendChild(document.createElement("br"));
     form.appendChild(passwordLabel);
     form.appendChild(passwordInput);
     form.appendChild(document.createElement("br"));
+     // Append the spans to the document body
+    form.appendChild(passwordSpan);
     form.appendChild(document.createElement("br"));
     form.appendChild(submitBtn);
 
@@ -70,5 +85,23 @@ document.addEventListener("DOMContentLoaded", function() {
         modal.style.display = "none";
       }
     });
+
+    // Function for username and password trimming
+    submitBtn.addEventListener("click", function(event){
+     var usernameInput = document.getElementById('username').value;
+
+     var trimmedusernameInput = usernameInput.trim();
+
+     if(trimmedusernameInput === "") {
+        usernameSpan.style.display = "block";
+        event.preventDefault(); //Prevent Default Submission
+     }
+     else {
+      usernameSpan.style.display = "none";
+     }
+
+      
+    });
+
   });
 });
