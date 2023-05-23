@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Create the second span element
     var passwordSpan = document.createElement("span");
-    passwordSpan.textContent = "Please fill up your Password";
+    passwordSpan.textContent = "Please fill up your password";
     passwordSpan.style.display = "none";
 
 
@@ -108,13 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
      }
      else {
         passwordSpan.style.display = "none";
-     }
-
-
-
-
-      
+     } 
     });
-
   });
 });
