@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var usernameLabel = document.createElement("label");
     usernameLabel.setAttribute("for", "username");
     usernameLabel.textContent = "Username:";
-    var usernameInput = document.createElement("input");
+    const usernameInput = document.createElement("input");
     usernameInput.setAttribute("type", "text");
     usernameInput.setAttribute("id", "username");
     usernameInput.setAttribute("name", "username");
@@ -27,18 +27,18 @@ document.addEventListener("DOMContentLoaded", function() {
     var passwordLabel = document.createElement("label");
     passwordLabel.setAttribute("for", "password");
     passwordLabel.textContent = "Password:";
-    var passwordInput = document.createElement("input");
+    const passwordInput = document.createElement("input");
     passwordInput.setAttribute("type", "password");
     passwordInput.setAttribute("id", "password");
     passwordInput.setAttribute("name", "password");
 
         // Create the first span element
-    var usernameSpan = document.createElement("span");
+    const usernameSpan = document.createElement("span");
     usernameSpan.textContent = "Please fill up your username";
     usernameSpan.style.display = "none";
 
     // Create the second span element
-    var passwordSpan = document.createElement("span");
+    const passwordSpan = document.createElement("span");
     passwordSpan.textContent = "Please fill up your password";
     passwordSpan.style.display = "none";
 
@@ -88,15 +88,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function for username and password trimming
     submitBtn.addEventListener("click", function(event){
-     var usernameInput = document.getElementById('username').value;
-     var passwordInput = document.getElementById('password').value;
+      event.preventDefault();
+     const usernameInput = document.getElementById('username').value;
+     const passwordInput = document.getElementById('password').value;
 
-     var trimmedusernameInput = usernameInput.trim();
-     var trimmedpasswordInput = passwordInput.trim();
+     const trimmedusernameInput = usernameInput.trim();
+     const trimmedpasswordInput = passwordInput.trim();
 
      if(trimmedusernameInput === "") {
         usernameSpan.style.display = "block";
-        event.preventDefault(); //Prevent Default Submission
+        return false;
+        
      }
      else {
         usernameSpan.style.display = "none";
@@ -104,7 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
      if(trimmedpasswordInput === "") {
         passwordSpan.style.display = "block";
-        event.preventDefault();
+        return false;
+        
      }
      else {
         passwordSpan.style.display = "none";
