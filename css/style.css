@@ -309,8 +309,9 @@ ol.type li a {
 	transition: all 0.3s;
 }
 ol.type li a.active {
-	background: #6aaf08;
+	background: #000000;
 	color: #fff;
+	transition: all 0.8s;
 }
 ol.type li a:hover {
 	background: #6aaf08;
