@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
      if(trimmedusernameInput === "") {
         usernameSpan.style.display = "block";
-        return false;
+        event.preventDefault();
         
      }
      else {
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
      if(trimmedpasswordInput === "") {
         passwordSpan.style.display = "block";
-        return false;
+        event.preventDefault();
         
      }
      else {
