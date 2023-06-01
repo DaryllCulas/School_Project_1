@@ -1,10 +1,8 @@
 /*
  *  jQuery OwlCarousel v1.3.2
  *
- *  Copyright (c) 2013 Bartosz Wojciechowski
  *  http://www.owlgraphic.com/owlcarousel/
  *
- *  Licensed under MIT
  *
  */
 

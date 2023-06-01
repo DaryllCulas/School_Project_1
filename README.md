@@ -1,3 +1,3 @@
 # School_Project_1
-# Project Retrocade || Retroc8de
+# CVSU-ITS Unofficial Website
 This is school project only
