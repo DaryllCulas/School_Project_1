@@ -1,4 +1,3 @@
-
 function main() {
 
 (function () {
@@ -75,9 +74,6 @@ function main() {
             effect: 'slideDown',  
             keyboardNav: true,                            
         });
-		
-
-
 }());
 
 
