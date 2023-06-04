@@ -79,7 +79,7 @@ function main() {
 
   $('#loginPortal').click(function(){
     alert(`You are redirecting to Login Portal`);
-    window.location.href= "../Portals/portal.html";
+   
   });
   
 
