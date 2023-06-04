@@ -108,9 +108,11 @@
       <span id="faculty_Password_error">Please fill up your Faculty Password!</span>
 
       <input type="button" value="LOGIN" onclick="validateAdminForm(event)">
+      <input type="button" value="Back to Portal" id="BackToLoginPortal">
     </form>
   </div>
   <script>
+
     function validateAdminForm(event) {
       event.preventDefault(); // Prevent form submission
       
@@ -154,6 +156,16 @@
         alert('Invalid data');
       }
     }
+
+    const BackToLoginPortal = document.getElementById("BackToLoginPortal");
+
+    BackToLoginPortal.addEventListener('click', function(event){
+      event.preventDefault(); // Prevent Default Submission
+        alert("You are redirecting to Portal");
+        window.location.href = "../Portals/portal.html";
+
+    });
+
   </script>
 </body>
 </html>
