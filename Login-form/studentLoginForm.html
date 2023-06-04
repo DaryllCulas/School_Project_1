@@ -110,6 +110,7 @@
       <span id="student_Password_error">Please fill up your Student Password!</span>
 
       <input type="button" value="LOGIN" onclick="validateStudentForm(event)">
+      <input type="button" value="Back to Portal" id="BackToLoginPortal">
     </form>
   </div>
   <script>
@@ -157,6 +158,14 @@
                 }
 
     }
+  const BackToLoginPortal = document.getElementById("BackToLoginPortal");
+
+  BackToLoginPortal.addEventListener('click', function(event){
+  event.preventDefault(); // Prevent Default Submission
+    alert("You are redirecting to Portal");
+    window.location.href = "../Portals/portal.html";
+
+});
   </script>
 </body>
 </html>
