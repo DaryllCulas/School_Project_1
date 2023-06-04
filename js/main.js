@@ -17,7 +17,7 @@ function main() {
       });
 
 	
-    // Show Menu on Book
+    // Show Menu 
     $(window).bind('scroll', function() {
         var navHeight = $(window).height() - 500;
         if ($(window).scrollTop() > navHeight) {
@@ -74,6 +74,15 @@ function main() {
             effect: 'slideDown',  
             keyboardNav: true,                            
         });
+
+  // alert to portal
+
+  $('#loginPortal').click(function(){
+    alert(`You are redirecting to Login Portal`);
+    window.location.href= "../Portals/portal.html";
+  });
+  
+
 }());
 
 
