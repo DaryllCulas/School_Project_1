@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login Form</title>
+  <style>
+    /* Global styles */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+      background: linear-gradient(to bottom, rgba(255, 0, 0, 0.8), rgba(0, 0, 255, 0.8)), url('../Bacoor-Campus-scaled.jpg');
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Container styles */
+    .container {
+      width: 90%;
+      max-width: 400px;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Heading styles */
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Form styles */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Label styles */
+    label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    /* Input styles */
+    input {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Error message styles */
+    span {
+      display: none;
+      color: red;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    /* Button styles */
+    input[type="button"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    input[type="button"]:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <form action="/student_login" method="post">
+      <h2>STUDENT LOGIN</h2>
+      <label for="studentID">Student ID</label>
+      <input id="studentID" type="text" placeholder="Enter your Student ID no.">
+      <span id="student_ID_error">Please fill up your Student ID no.!</span>
+
+      <label for="studentEmail">Student Email</label>
+      <input id="studentEmail" type="text" placeholder="Enter your Student Email">
+      <span id="student_Email_error">Please fill up your Student Email!</span>
+
+      <label for="studentPassword">Student Password</label>
+      <input id="studentPassword" type="password" placeholder="">
+      <span id="student_Password_error">Please fill up your Student Password!</span>
+
+      <input type="button" value="LOGIN" onclick="validateStudentForm()">
+    </form>
+  </div>
+  <script>
+    function validateStudentForm() {
+           // Get form input values
+      const studentID = document.getElementById("studentID").value;
+      const studentEmail = document.getElementById("studentEmail").value;
+      const studentPassword = document.getElementById("studentPassword").value;
+
+      // Validate form inputs
+      if (studentID === "") {
+        document.getElementById("student_ID_error").style.display = "block";
+      } else {
+        document.getElementById("student_ID_error").style.display = "none";
+      }
+
+      if (studentEmail === "") {
+        document.getElementById("student_Email_error").style.display = "block";
+      } else {
+        document.getElementById("student_Email_error").style.display = "none";
+      }
+
+      if (studentPassword === "") {
+        document.getElementById("student_Password_error").style.display = "block";
+      } else {
+        document.getElementById("student_Password_error").style.display = "none";
+      }
+
+      
+            // Check for an error parameter in the URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const error = urlParams.get('error');
+
+                if (error === '1') {
+                  alert('Invalid data');
+                }
+
+    }
+  </script>
+</body>
+</html>
