@@ -7,6 +7,19 @@ body{
   font-family: sans-serif;
   transition: transform 3s ease-in-out;
 }
+
+@keyframes floatAnimation {
+  0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
 .title{
   padding-left: 3%;
 }
@@ -32,17 +45,7 @@ animation: floatAnimation 3s infinite;
 box-shadow: 2px 10px 2px black;
 
 }
-@keyframes floatAnimation {
-0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+
 
 h3{
   font-size: 2vw;
@@ -66,4 +69,7 @@ cursor: pointer;
 a:hover {
   color: black;
   text-shadow: 2px 2px 5px yellow;
+}
+h2:hover, a:hover {
+  animation: floatAnimation 3s infinite;
 }
