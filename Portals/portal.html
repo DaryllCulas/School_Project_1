@@ -15,7 +15,7 @@
 
                 <div class="main-content">
                     <div class="icon">
-                        <a href="#">
+                        <a id="studentRedirect">
                            <img src="student.jpg">
                          </a>
                          <h3>Student</h3>
@@ -23,7 +23,7 @@
                        
 
                     <div class="icon">
-                        <a href="#">
+                        <a id="adminRedirect">
                            <img src="admin.jpg">
                          </a>
                          <h3>Admin</h3>
@@ -35,10 +35,24 @@
     </body>
   <script>
     const homeRedirect = document.getElementById('redirectToHome');
+    const studentRedirect = document.getElementById('studentRedirect');
+    const adminRedirect = document.getElementById('adminRedirect');
+
     homeRedirect.addEventListener('click', function(event) {
         event.preventDefault();
         alert("You are redirecting to Home");
         window.location.href = "../index.html";
+    });
+
+    studentRedirect.addEventListener('click', function(event){
+        event.preventDefault();
+        alert("You are redirecting to Student Login Form!");
+        window.location.href="../Login-form/studentLoginForm.html";
+    });
+
+    adminRedirect.addEventListener('click', function(event){
+        event.preventDefault();
+        window.location.href="../Login-form/adminLoginForm.html"
     });
   </script>
 </html>
