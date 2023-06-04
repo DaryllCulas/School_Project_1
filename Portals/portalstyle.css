@@ -1,5 +1,5 @@
 
-    body{
+body{
       background: rgba(0,0,0,0.5) url(cvsu.jpg);
       background-size: cover;
       background-repeat: no-repeat;
@@ -7,11 +7,11 @@
       color: white;
       font-family: sans-serif;
   }
-  .title{
+.title{
       padding-left: 3%;
   }
   
-  .main-content{
+.main-content{
       display: flex;
       width: 80%;
       justify-content: space-between;
@@ -20,17 +20,44 @@
       
   } 
 
-  .icon img{
+ img{
       width: 40%;
       border-radius: 50%;
       margin-left: 20%;
+      
   } 
+img:hover {
+    position: relative;
+    animation: floatAnimation 3s infinite;
+    box-shadow: 5px 15px 5px black;
+    
+}
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+}
 
-  h3{
+
+
+
+h3{
       font-size: 2vw;
       color: black;
       margin-left: 29%;
       font-family: sans-serif;
       color: white;
+      text-shadow: 2px 2px 2px black;
   } 
-         
+h2 {
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px black;
+}
+
