@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Login Form</title>
+  <title>Admin Login Form</title>
   <style>
-    /* Global styles */
-    * {
+      /* Global styles */
+      * {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
@@ -93,67 +93,66 @@
 <body>
   <div class="container">
     <!-- Login Form -->
-    <form action="/student_login" method="post" id="student_loginForm">
-      <h2>STUDENT LOGIN</h2>
-      <label for="studentID">Student ID</label>
-      <input id="studentID" type="text" placeholder="Enter your Student ID no.!">
-      <span id="student_ID_error">Please fill up your Student ID no.!</span>
+    <form action="/admin_login" method="post" id="admin_loginForm">
+      <h2>ADMIN LOGIN</h2>
+      <label for="facultyID">Faculty ID No.</label>
+      <input id="facultyID" type="text" placeholder="Enter your Personal Faculty ID no.">
+      <span id="faculty_ID_error">Please fill up your Faculty ID no.!</span>
 
-      <label for="studentEmail">Student Email</label>
-      <input id="studentEmail" type="text" placeholder="Enter your Student Email!">
-      <span id="student_Email_error">Please fill up your Student Email!</span>
+      <label for="facultyEmail">Faculty Email</label>
+      <input id="facultyEmail" type="text" placeholder="Enter your Personal Faculty Email">
+      <span id="faculty_Email_error">Please fill up your Faculty Email!</span>
 
-      <label for="studentPassword">Student Password</label>
-      <input id="studentPassword" type="password" placeholder="Enter your Student Password!">
-      <span id="student_Password_error">Please fill up your Student Password!</span>
+      <label for="facultyPassword">Faculty Password</label>
+      <input id="facultyPassword" type="password" placeholder="Enter your Personal Faculty Password!">
+      <span id="faculty_Password_error">Please fill up your Faculty Password!</span>
 
-      <input type="button" value="LOGIN" onclick="validateStudentForm(event)">
+      <input type="button" value="LOGIN" onclick="validateAdminForm(event)">
     </form>
   </div>
   <script>
-    function validateStudentForm(event) {
+    function validateAdminForm(event) {
       event.preventDefault(); // Prevent form submission
-           // Get form input values
-      const studentID = document.getElementById("studentID").value;
-      const studentEmail = document.getElementById("studentEmail").value;
-      const studentPassword = document.getElementById("studentPassword").value;
+      
+      // Get form input values
+      const facultyID = document.getElementById("facultyID").value;
+      const facultyEmail = document.getElementById("facultyEmail").value;
+      const facultyPassword = document.getElementById("facultyPassword").value;
       let isValid = true;
 
       // Validate form inputs
-      if (studentID === "") {
-        document.getElementById("student_ID_error").style.display = "block";
+      if (facultyID === "") {
+        document.getElementById("faculty_ID_error").style.display = "block";
         isValid = false;
       } else {
-        document.getElementById("student_ID_error").style.display = "none";
+        document.getElementById("faculty_ID_error").style.display = "none";
       }
 
-      if (studentEmail === "") {
-        document.getElementById("student_Email_error").style.display = "block";
+      if (facultyEmail === "") {
+        document.getElementById("faculty_Email_error").style.display = "block";
         isValid = false;
       } else {
-        document.getElementById("student_Email_error").style.display = "none";
+        document.getElementById("faculty_Email_error").style.display = "none";
       }
 
-      if (studentPassword === "") {
-        document.getElementById("student_Password_error").style.display = "block";
+      if (facultyPassword === "") {
+        document.getElementById("faculty_Password_error").style.display = "block";
         isValid = false;
       } else {
-        document.getElementById("student_Password_error").style.display = "none";
+        document.getElementById("faculty_Password_error").style.display = "none";
       }
 
       if (isValid) {
-        document.getElementById('student_loginForm').submit();
+        document.getElementById('admin_loginForm').submit();
       } 
+      
+      // Check for an error parameter in the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
 
-
-            // Check for an error parameter in the URL
-          const urlParams = new URLSearchParams(window.location.search);
-          const error = urlParams.get('error');
-
-                if (error === '1') {
-                  alert('Invalid data');
-                }
-
+      if (error === '1') {
+        alert('Invalid data');
+      }
     }
   </script>
 </body>
