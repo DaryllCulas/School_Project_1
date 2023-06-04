@@ -23,9 +23,9 @@ body{
  img{
       width: 40%;
       border-radius: 50%;
-      margin-left: 20%;
-      
+      margin-left: 20%;  
   } 
+  
 img:hover {
     position: relative;
     animation: floatAnimation 3s infinite;
@@ -43,9 +43,6 @@ img:hover {
         transform: translateY(0);
       }
 }
-
-
-
 
 h3{
       font-size: 2vw;
