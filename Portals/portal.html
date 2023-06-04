@@ -9,12 +9,13 @@
     <body>
         <section>
             <div class="title">
-                <h2>CVSU-ITS Portal</h2>
+                <h2><a id="redirectToHome">CVSU-ITS Portal</a></h2>
+                
             </div>
 
                 <div class="main-content">
                     <div class="icon">
-                        <a href="main.html">
+                        <a href="#">
                            <img src="student.jpg">
                          </a>
                          <h3>Student</h3>
@@ -22,7 +23,7 @@
                        
 
                     <div class="icon">
-                        <a href="main.html">
+                        <a href="#">
                            <img src="admin.jpg">
                          </a>
                          <h3>Admin</h3>
@@ -30,5 +31,14 @@
                        
                 </div>
         </section>  
+        
     </body>
+  <script>
+    const homeRedirect = document.getElementById('redirectToHome');
+    homeRedirect.addEventListener('click', function(event) {
+        event.preventDefault();
+        alert("You are redirecting to Home");
+        window.location.href = "../index.html";
+    });
+  </script>
 </html>
