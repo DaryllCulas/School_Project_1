@@ -1,11 +1,11 @@
 const express = require("express");
 const mssql = require("mssql");
 const router = express.Router();
-const config = require("./serverConfiguration");
+const config = require("./serverConfig");
 
 // Login endpoint
-router.post('/login', (req, res) => {
-  const { studentID, Email, StudentPassword } = req.body;
+router.post('/student_login', (req, res) => {
+  const { studentID, studentEmail, studentPassword } = req.body;
 
   const pool = new mssql.ConnectionPool(config);
   pool.connect((err) => {
@@ -16,7 +16,7 @@ router.post('/login', (req, res) => {
 
     const request = new mssql.Request(pool);
 
-    const query = `SELECT * FROM studentTable WHERE studentID = '${studentID}' AND Email = '${Email}' AND StudentPassword = '${StudentPassword}'`;
+    const query = `SELECT * FROM ITstudent WHERE studentID = '${studentID}' AND studentEmail = '${studentEmail}' AND studentPassword = '${studentPassword}'`;
 
     request.query(query, (err, recordset) => {
       if (err) {
