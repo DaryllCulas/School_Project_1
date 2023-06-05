@@ -1,7 +1,7 @@
 const express = require("express");
 const mssql = require("mssql");
 const router = express.Router();
-const config = require("./serverConfig");
+const config = require("./serverConfiguration");
 
 // Login endpoint
 router.post('/student_login', (req, res) => {
@@ -28,7 +28,7 @@ router.post('/student_login', (req, res) => {
         res.send(`
         <script>
         alert("Login Successfully Login");
-        window.location.href = "/dashboard";
+        window.location.href = "../dashboard";
           </script>
           `);
           
