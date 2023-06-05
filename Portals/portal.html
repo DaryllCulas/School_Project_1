@@ -24,7 +24,7 @@
 
                     <div class="icon">
                         <a id="adminRedirect">
-                           <img src="admin.jpg">
+                           <img id="adminImg" src="admin.jpg">
                          </a>
                          <h3>Admin</h3>
                     </div>
@@ -52,6 +52,7 @@
 
     adminRedirect.addEventListener('click', function(event){
         event.preventDefault();
+        alert("You are redirecting to Admin Login Form!");
         window.location.href="../Login-form/adminLoginForm.html"
     });
   </script>
