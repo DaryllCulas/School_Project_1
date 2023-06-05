@@ -98,15 +98,15 @@
     <form action="/student_login" method="post" id="student_loginForm">
       <h2>STUDENT LOGIN</h2>
       <label for="studentID">Student ID</label>
-      <input id="studentID" type="text" placeholder="Enter your Student ID no.!">
+      <input id="studentID" type="text" placeholder="Enter your Student ID no.!" name="studentID">
       <span id="student_ID_error">Please fill up your Student ID no.!</span>
 
       <label for="studentEmail">Student Email</label>
-      <input id="studentEmail" type="text" placeholder="Enter your Student Email!">
+      <input id="studentEmail" type="text" placeholder="Enter your Student Email!" name="studentEmail">
       <span id="student_Email_error">Please fill up your Student Email!</span>
 
       <label for="studentPassword">Student Password</label>
-      <input id="studentPassword" type="password" placeholder="Enter your Student Password!">
+      <input id="studentPassword" type="password" placeholder="Enter your Student Password!" name="studentPassword">
       <span id="student_Password_error">Please fill up your Student Password!</span>
 
       <input type="button" value="LOGIN" onclick="validateStudentForm(event)">
