@@ -15,7 +15,6 @@ router.post('/student_login', (req, res) => {
     }
 
     const request = new mssql.Request(pool);
-
     const query = `SELECT * FROM ITstudent WHERE studentID = '${studentID}' AND studentEmail = '${studentEmail}' AND studentPassword = '${studentPassword}'`;
 
     request.query(query, (err, recordset) => {
