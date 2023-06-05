@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const serverConfig = require("./serverConfig");
+const serverConfig = require("./serverConfiguration");
 const loginEndpoint = require("./loginEndpoint");
 // const logoutEndpoint = require("./logoutEndpoint");
 const path = require("path");
@@ -18,10 +18,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../Login-form/studentLoginForm.html"));
 });
 
-// // Dashboard endpoint
-// app.get("/dashboard", function (req, res) {
-//   res.sendFile(__dirname + "/dashboard.html");
-// });
+// Dashboard endpoint
+app.get("/dashboard", function (req, res) {
+  res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard.html"));
+});
 
 app.use("/", loginEndpoint);
 // app.use("/", logoutEndpoint);
