@@ -1,0 +1,30 @@
+{
+  "name": "school_project_1",
+  "version": "1.0.0",
+  "description": "This is school project only",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DaryllCulas/School_Project_1.git"
+  },
+  "keywords": [
+    "student_information_system"
+  ],
+  "author": "DaryllCulas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaryllCulas/School_Project_1/issues"
+  },
+  "homepage": "https://github.com/DaryllCulas/School_Project_1#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "express-router": "^0.0.1",
+    "msnodesqlv8": "^4.1.0",
+    "mssql": "^9.1.1",
+    "tedious": "^16.1.0"
+  }
+}
