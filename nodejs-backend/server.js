@@ -22,7 +22,6 @@ const config = {
   port: 1433,
   options: {
     trustServerCertificate: true,
-  
   },
 };
 
