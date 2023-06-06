@@ -32,8 +32,13 @@ router.post('/student_login', (req, res) => {
           `);
           
       } else {
-      
-        return res.redirect("/?error=1");
+        res.send(`
+        <script>
+          alert("Invalid data");
+          window.location.href = "/?error=1";
+        </script>
+      `);
+        // return res.redirect("/?error=1");
       }
     });
   });
