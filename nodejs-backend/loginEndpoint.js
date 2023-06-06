@@ -38,7 +38,6 @@ router.post('/student_login', (req, res) => {
           window.location.href = "/?error=1";
         </script>
       `);
-        // return res.redirect("/?error=1");
       }
     });
   });
