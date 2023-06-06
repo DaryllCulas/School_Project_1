@@ -193,11 +193,17 @@
       alert("You are redirecting to Portal");
       window.location.href = "../Portals/portal.html";
     });
+
+
   
     function limitInputToSevenChars() {
       const input = document.getElementById('studentID');
+
+        // Add an event listener to the input field
       input.addEventListener('input', function() {
         this.value = this.value.replace(/\D/g, ''); // Remove non-digit characters
+
+        // Check if the input value is longer than 7 characters
         if (this.value.length > 7) {
           this.value = this.value.slice(0, 7); // Truncate to 7 characters
         }
@@ -205,6 +211,7 @@
     }
   
     limitInputToSevenChars();
+
   
     function togglePasswordVisibility() {
       const passwordInput = document.getElementById('studentPassword');
