@@ -1,0 +1,108 @@
+body {
+  background: rgba(0, 0, 0, 0.5) url(cvsu.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  color: white;
+  font-family: sans-serif;
+  transition: transform 3s ease-in-out;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 0 transparent); /* Initial shadow animation state */
+  }
+  50% {
+    transform: translateY(-20px);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Shadow animation state */
+  }
+  100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 0 transparent); /* Final shadow animation state */
+  }
+}
+
+.title {
+  padding-left: 3%;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+  border-radius: 20px;
+}
+
+.icon {
+  text-align: center;
+  padding-top: 10%;
+}
+
+.icon a {
+  display: flex;
+  flex-direction: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 100%;
+  max-width: 300px; /* Increased image size to 300px */
+  border-radius: 50%;
+  border: 3px solid;
+  object-fit: contain; /* Adjusted object-fit to maintain image aspect ratio */
+ 
+}
+#adminImg {
+  margin-top: 30px;
+}
+
+.icon h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 1px 2px 5px black; /* Added shadow animation to obscure the object */
+  text-align: center; /* Center-aligned the text */
+  margin-bottom: 10px; /* Added margin-bottom to provide spacing */
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 2px 2px black;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: black;
+  text-shadow: 2px 2px 5px yellow;
+}
+
+h2:hover,
+a:hover {
+  animation: floatAnimation 3s infinite;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon {
+    width: 80%;
+  }
+}
