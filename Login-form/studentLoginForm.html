@@ -206,6 +206,7 @@
   
     limitInputToSevenChars();
 
+    // Function to show password
     function togglePasswordVisibility() {
       const passwordInput = document.getElementById('studentPassword');
       const passwordToggle = document.querySelector('.password-toggle');
@@ -218,6 +219,7 @@
         passwordToggle.setAttribute('src', '../assets/eye-icon.png');
       }
     }
+
 // Function to validate the email format
 function validateEmailFormat(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for email validation
