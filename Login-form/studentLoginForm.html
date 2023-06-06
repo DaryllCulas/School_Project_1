@@ -13,7 +13,7 @@
       margin: 0;
       box-sizing: border-box;
     }
-
+  
     /* Body styles */
     body {
       background: linear-gradient(to bottom, rgba(255, 0, 0, 0.8), rgba(0, 0, 255, 0.8)), url('../assets/Bacoor-Campus-scaled.jpg');
@@ -26,7 +26,7 @@
       align-items: center;
       justify-content: center;
     }
-
+  
     /* Container styles */
     .container {
       width: 90%;
@@ -37,25 +37,25 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-
+  
     /* Heading styles */
     h2 {
       text-align: center;
       margin-bottom: 20px;
     }
-
+  
     /* Form styles */
     form {
       display: flex;
       flex-direction: column;
     }
-
+  
     /* Label styles */
     label {
       margin-bottom: 10px;
       font-weight: bold;
     }
-
+  
     /* Input styles */
     input {
       padding: 10px;
@@ -64,7 +64,7 @@
       border-radius: 5px;
       font-size: 16px;
     }
-
+  
     /* Error message styles */
     span {
       display: none;
@@ -72,7 +72,7 @@
       margin-bottom: 10px;
       font-size: 14px;
     }
-
+  
     /* Button styles */
     input[type="button"] {
       background-color: #4CAF50;
@@ -84,12 +84,36 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
-    
+  
     input[type="button"]:hover {
-      background-color: black;
-      color: white;
+      background-color: #45a049;
+    }
+  
+    /* Password container styles */
+    .password-container {
+      position: relative;
+    }
+  
+    /* Password input styles */
+    input[type="password"] {
+      padding-right: 40px;
+    }
+  
+    /* Password toggle styles */
+    .password-toggle {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 20px; /* Adjust the width as needed */
+      height: 20px; /* Adjust the height as needed */
     }
   </style>
+  
+  
+  
+  
 
 </head>
 <body>
@@ -97,31 +121,35 @@
     <!-- Login Form -->
     <form action="/student_login" method="post" id="student_loginForm">
       <h2>STUDENT LOGIN</h2>
-      <label for="studentID">Student ID</label>
-      <input id="studentID" type="text" placeholder="Enter your Student ID no.!" name="studentID">
-      <span id="student_ID_error">Please fill up your Student ID no.!</span>
+        <label for="studentID">Student ID</label>
+          <input id="studentID" type="text" placeholder="Enter your Student ID no.!" name="studentID">
+            <span id="student_ID_error">Please fill up your Student ID no.!</span>
 
       <label for="studentEmail">Student Email</label>
-      <input id="studentEmail" type="text" placeholder="Enter your Student Email!" name="studentEmail">
-      <span id="student_Email_error">Please fill up your Student Email!</span>
+        <input id="studentEmail" type="text" placeholder="Enter your Student Email!" name="studentEmail">
+          <span id="student_Email_error">Please fill up your Student Email!</span>
 
-      <label for="studentPassword">Student Password</label>
-      <input id="studentPassword" type="password" placeholder="Enter your Student Password!" name="studentPassword">
-      <span id="student_Password_error">Please fill up your Student Password!</span>
+      <div class="password-container">
+          <label for="studentPassword">Student Password</label>
+            <input id="studentPassword" type="password" placeholder="Enter your Student Password!" name="studentPassword">
+              <span id="student_Password_error">Please fill up your Student Password!</span>
+                <img class="password-toggle" src="../assets/eye-icon.png" alt="Toggle Password" onclick="togglePasswordVisibility()">
+      </div>
 
-      <input type="button" value="LOGIN" onclick="validateStudentForm(event)">
-      <input type="button" value="Back to Portal" id="BackToLoginPortal">
+        <input type="button" value="LOGIN" onclick="validateStudentForm(event)">
+        <input type="button" value="Back to Portal" id="BackToLoginPortal">
     </form>
   </div>
   <script>
     function validateStudentForm(event) {
       event.preventDefault(); // Prevent form submission
-           // Get form input values
+  
+      // Get form input values
       const studentID = document.getElementById("studentID").value;
       const studentEmail = document.getElementById("studentEmail").value;
       const studentPassword = document.getElementById("studentPassword").value;
       let isValid = true;
-
+  
       // Validate form inputs
       if (studentID === "") {
         document.getElementById("student_ID_error").style.display = "block";
@@ -129,7 +157,7 @@
       } else {
         document.getElementById("student_ID_error").style.display = "none";
       }
-
+  
       if (studentEmail === "") {
         document.getElementById("student_Email_error").style.display = "block";
         isValid = false;
@@ -143,29 +171,58 @@
       } else {
         document.getElementById("student_Password_error").style.display = "none";
       }
-
+  
       if (isValid) {
         document.getElementById('student_loginForm').submit();
-      } 
-
-
-            // Check for an error parameter in the URL
-          const urlParams = new URLSearchParams(window.location.search);
-          const error = urlParams.get('error');
-
-                if (error === '1') {
-                  alert('Invalid data');
-                }
-
+      }
+  
+      // Check for an error parameter in the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+  
+      if (error === '1') {
+        alert('Invalid data');
+      }
     }
-  const BackToLoginPortal = document.getElementById("BackToLoginPortal");
+  
+    // Redirect to login Portal
+    const BackToLoginPortal = document.getElementById("BackToLoginPortal");
+  
+    BackToLoginPortal.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent Default Submission
+      alert("You are redirecting to Portal");
+      window.location.href = "../Portals/portal.html";
+    });
+  
+    function limitInputToSevenChars() {
+      const input = document.getElementById('studentID');
+      input.addEventListener('input', function() {
+        this.value = this.value.replace(/\D/g, ''); // Remove non-digit characters
+        if (this.value.length > 7) {
+          this.value = this.value.slice(0, 7); // Truncate to 7 characters
+        }
+      });
+    }
+  
+    limitInputToSevenChars();
+  
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('studentPassword');
+      const passwordToggle = document.querySelector('.password-toggle');
+  
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordToggle.setAttribute('src', '../assets/eye-icon-off.png');
+      } else {
+        passwordInput.type = 'password';
+        passwordToggle.setAttribute('src', '../assets/eye-icon.png');
+      }
+    }
 
-  BackToLoginPortal.addEventListener('click', function(event){
-  event.preventDefault(); // Prevent Default Submission
-    alert("You are redirecting to Portal");
-    window.location.href = "../Portals/portal.html";
 
-});
+
+    
   </script>
+  
 </body>
 </html>
