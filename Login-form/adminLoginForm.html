@@ -88,6 +88,26 @@
       background-color: black;
       color: white;
     }
+        /* Password container styles */
+        .password-container {
+      position: relative;
+    }
+  
+    /* Password input styles */
+    input[type="password"] {
+      padding-right: 40px;
+    }
+  
+    /* Password toggle styles */
+    .password-toggle {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 20px; /* Adjust the width as needed */
+      height: 20px; /* Adjust the height as needed */
+    }
   </style>
 </head>
 <body>
@@ -95,18 +115,20 @@
     <!-- Login Form -->
     <form action="/admin_login" method="post" id="admin_loginForm">
       <h2>ADMIN LOGIN</h2>
-      <label for="facultyID">Faculty ID No.</label>
-      <input id="facultyID" type="text" placeholder="Enter your Personal Faculty ID no.">
-      <span id="faculty_ID_error">Please fill up your Faculty ID no.!</span>
+        <label for="facultyID">Faculty ID No.</label>
+          <input id="facultyID" type="text" placeholder="Enter your Personal Faculty ID no." name="facultyID">
+            <span id="faculty_ID_error">Please fill up your Faculty ID no.!</span>
 
       <label for="facultyEmail">Faculty Email</label>
-      <input id="facultyEmail" type="text" placeholder="Enter your Personal Faculty Email">
-      <span id="faculty_Email_error">Please fill up your Faculty Email!</span>
+        <input id="facultyEmail" type="text" placeholder="Enter your Personal Faculty Email" name="facultyEmail">
+          <span id="faculty_Email_error">Please fill up your Faculty Email!</span>
 
-      <label for="facultyPassword">Faculty Password</label>
-      <input id="facultyPassword" type="password" placeholder="Enter your Personal Faculty Password!">
-      <span id="faculty_Password_error">Please fill up your Faculty Password!</span>
-
+      <div class="password-container">
+        <label for="facultyPassword">Faculty Password</label>
+          <input id="facultyPassword" type="password" placeholder="Enter your Faculty Password!" name="facultyPassword">
+            <span id="faculty_Password_error">Please fill up your Faculty Password!</span>
+            <img class="password-toggle" src="../assets/eye-icon.png" alt="Toggle Password" onclick="togglePasswordVisibility()">
+      </div>
       <input type="button" value="LOGIN" onclick="validateAdminForm(event)">
       <input type="button" value="Back to Portal" id="BackToLoginPortal">
     </form>
@@ -165,6 +187,69 @@
         window.location.href = "../Portals/portal.html";
 
     });
+
+
+    function limitInputToSevenChars() {
+      const input = document.getElementById('facultyID');
+
+        // Add an event listener to the input field
+      input.addEventListener('input', function() {
+        this.value = this.value.replace(/\D/g, ''); // Remove non-digit characters
+
+        // Check if the input value is longer than 7 characters
+        if (this.value.length > 7) {
+          this.value = this.value.slice(0, 7); // Truncate to 7 characters
+        }
+      });
+    }
+  
+    limitInputToSevenChars();
+
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('facultyPassword');
+      const passwordToggle = document.querySelector('.password-toggle');
+  
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordToggle.setAttribute('src', '../assets/eye-icon-off.png');
+      } else {
+        passwordInput.type = 'password';
+        passwordToggle.setAttribute('src', '../assets/eye-icon.png');
+      }
+    }
+
+    // Function to validate the email format
+function validateEmailFormat(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for email validation
+     return emailRegex.test(email);
+}
+
+// Function for email input validation
+function emailInputValidation() {
+  const emailInput = document.getElementById('facultyEmail'); // Get the email input element
+  const emailError = document.getElementById('faculty_Email_error'); // Get the email error element
+
+  // Add an event listener to the email input
+  emailInput.addEventListener('input', function() {
+    const email = this.value.trim(); // Trim the input value to remove leading/trailing whitespace
+
+    if (email === '') {
+      // Empty email
+      emailError.style.display = 'block'; // Show the error message
+      emailError.textContent = 'Please fill up your Faculty Email!'; // Set the error message text
+    } else if (!validateEmailFormat(email)) {
+      // Invalid email format
+      emailError.style.display = 'block'; // Show the error message
+      emailError.textContent = 'Invalid email format!'; // Set the error message text
+    } else {
+      // Valid email
+      emailError.style.display = 'none'; // Hide the error message
+    }
+  });
+}
+
+// Call the emailInputValidation function to enable email input validation
+emailInputValidation();
 
   </script>
 </body>
