@@ -9,11 +9,14 @@ const port = 5000;
 // Middleware for serving static assets
 app.use("/assets", express.static(path.join(__dirname, "../assets")));
 
-// Middleware for serveing static Portals
+// Middleware for serving static Portals
 app.use("/Portals", express.static(path.join(__dirname, "../Portals")));
 
-// Middleware for serving static LoginForm/
+// Middleware for serving static LoginForm
 app.use("/Login-form", express.static(path.join(__dirname, "../Login-form")));
+
+// Middleware for serving static index
+app.use("/",express.static(path.join(__dirname, "../")))
 
 // Body parser middleware
 app.use(express.json());
