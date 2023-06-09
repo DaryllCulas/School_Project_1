@@ -26,8 +26,8 @@ router.post('/student_login', (req, res) => {
       if (recordset.recordset.length > 0) {
         res.send(`
         <script>
-        alert("Login Successfully Login");
-        window.location.href = "../dashboard";
+        alert("Login Successfully!");
+        window.location.href = "${'/studentdashboard'}";
           </script>
           `);
           
@@ -35,7 +35,7 @@ router.post('/student_login', (req, res) => {
         res.send(`
         <script>
           alert("Invalid data");
-          window.location.href = "/?error=1";
+          window.location.href = "../Login-form/studentLoginForm.html";
         </script>
       `);
       }
