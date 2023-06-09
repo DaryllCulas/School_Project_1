@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 
 
 // Dashboard endpoint for student
-app.get("/studentdashboard", function (req, res) {
+app.get("/studentDashboard", function (req, res) {
   res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
 });
 
