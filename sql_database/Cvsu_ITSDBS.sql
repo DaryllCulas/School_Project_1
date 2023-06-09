@@ -8,8 +8,6 @@ CREATE TABLE ITstudent (
     studentPassword VARCHAR(255) NOT NULL
 );
 
-SELECT * FROM ITstudent;
-
 INSERT INTO ITstudent(
      studentFirstName,studentLastName, 
      studentEmail,studentPassword
@@ -65,3 +63,32 @@ INSERT INTO ITstudent(
     'tiburciokanor69@gmail.com',
     'demonslayer05'
 );
+
+SELECT * FROM ITstudent;
+
+CREATE TABLE AdminFaculty(
+    facultyID INT IDENTITY(2023001,5) PRIMARY KEY,
+    facultyFirstName VARCHAR(255) NOT NULL,
+    facultyLastName VARCHAR(255) NOT NULL,
+    facultyEmail VARCHAR(255) NOT NULL,
+    facultyPassword VARCHAR(255) NOT NULL
+)
+
+INSERT INTO AdminFaculty(
+    facultyFirstName,facultyLastName,
+    facultyEmail,facultyPassword
+)VALUES(
+    'Ralph', 'Christian',
+    'ralphchristian12@gmail.com', 'adminpassword12345'
+);
+
+INSERT INTO AdminFaculty(
+    facultyFirstName, facultyLastName,
+    facultyEmail, facultyPassword
+)VALUES(
+    'Juan', 'Delacruz',
+    'juandelacruz123@gmail.com','adminpassword67890'
+
+);
+
+SELECT * FROM AdminFaculty;
