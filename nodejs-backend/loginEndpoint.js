@@ -27,7 +27,7 @@ router.post('/student_login', (req, res) => {
         res.send(`
         <script>
         alert("Login Successfully!");
-        window.location.href = "${'/studentdashboard'}";
+        window.location.href = "${'/studentDashboard'}";
           </script>
           `);
           
@@ -68,7 +68,7 @@ router.post('/admin_login',(req, res) => {
         res.send(`
         <script>
         alert("Login Successfully Login");
-        window.location.href = "../dashboard";
+        window.location.href = "${'/adminDashboard'}";
           </script>
           `);
           
