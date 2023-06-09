@@ -34,10 +34,10 @@ app.get("/studentDashboard", function (req, res) {
 });
 
 
-
-// app/get("/admindashboard", function (res,req){
-//   res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
-// });
+// Dashboard endpoint for admin
+app.get("/adminDashboard", function (req,res){
+  res.sendFile(path.join(__dirname, "../Dashboards/adminDashboard/adminDashboard.html"));
+});
 
 // app.get("/dashboard", function (req, res) {
 //   res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
