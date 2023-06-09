@@ -34,9 +34,6 @@ app.get("/studentdashboard", function (req, res) {
 });
 
 
-app.get("/?error", function (req,res){
-  res.sendFile(path.join(__dirname, "../Login-form"));
-});
 
 // app/get("/admindashboard", function (res,req){
 //   res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
