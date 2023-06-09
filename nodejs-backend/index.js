@@ -28,10 +28,25 @@ app.get("/", (req, res) => {
 });
 
 
-// Dashboard endpoint
-app.get("/dashboard", function (req, res) {
-  res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard.html"));
+// Dashboard endpoint for student
+app.get("/studentdashboard", function (req, res) {
+  res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
 });
+
+
+app.get("/?error", function (req,res){
+  res.sendFile(path.join(__dirname, "../Login-form"));
+});
+
+// app/get("/admindashboard", function (res,req){
+//   res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
+// });
+
+// app.get("/dashboard", function (req, res) {
+//   res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
+// });
+
+
 
 app.use("/", loginEndpoint);
 app.use("/", logoutEndpoint);
