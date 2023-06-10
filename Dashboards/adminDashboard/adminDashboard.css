@@ -1,0 +1,47 @@
+* {
+  transition: background-color 0.1s ease-in-out;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #053615;
+  overflow-y: auto;
+  transition: width 0.3s ease-in-out;
+  z-index: 100;
+}
+.sidebar .nav-link {
+  color: #f8f9fa;
+}
+.sidebar .nav-link:hover {
+  background-color: yellow;
+  color: black;
+  font-weight: bolder;
+}
+.nav-item > a:hover{
+  color: yellow;
+}
+.content {
+  padding: 20px;
+  margin-left: 250px;
+  text-align: center;
+}
+#logoutLink:hover {
+  color: black;
+  background-color: yellow;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+  }
+  .sidebar.show {
+    width: 200px;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
