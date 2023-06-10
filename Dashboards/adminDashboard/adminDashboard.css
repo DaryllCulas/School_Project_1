@@ -1,5 +1,5 @@
 * {
-  transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 .sidebar {
   position: fixed;
@@ -33,6 +33,23 @@
   background-color: yellow;
   border-radius: 10px;
   font-weight: bolder;
+}
+h1 {
+  font-weight: bolder;
+}
+#ITS-Logo {
+  width: 60%;
+  height: auto;
+  margin-left: 30px;
+}
+
+/*Table customization*/
+.table-actions {
+  display: flex;
+  justify-content: center;
+}
+.table-actions .btn {
+  margin-right: 5px;
 }
 @media (max-width: 768px) {
   .sidebar {
