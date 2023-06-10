@@ -67,7 +67,7 @@ router.post('/admin_login',(req, res) => {
       if (recordset.recordset.length > 0) {
         res.send(`
         <script>
-        alert("Login Successfully Login");
+        alert("Login Successfully");
         window.location.href = "${'/adminDashboard'}";
           </script>
           `);
@@ -76,7 +76,7 @@ router.post('/admin_login',(req, res) => {
         res.send(`
         <script>
           alert("Invalid data");
-          window.location.href = "/?error=1";
+          window.location.href = "../Login-form/adminLoginForm.html";
         </script>
       `);
       }
