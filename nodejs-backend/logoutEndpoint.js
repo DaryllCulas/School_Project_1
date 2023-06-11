@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-// Logout Endpoint
+// Logout Endpoint 
 router.get("/logout", (req, res) => {
-  res.redirect("/");
+  res.redirect("../Portals/portal.html");
 });
+
 
 module.exports = router;
