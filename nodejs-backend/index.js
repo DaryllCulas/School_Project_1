@@ -16,7 +16,10 @@ app.use("/Portals", express.static(path.join(__dirname, "../Portals")));
 app.use("/Login-form", express.static(path.join(__dirname, "../Login-form")));
 
 // Middleware for serving static index
-app.use("/",express.static(path.join(__dirname, "../")))
+app.use("/",express.static(path.join(__dirname, "../")));
+
+// Middleware for serving static adminDashboard 
+app.use("/adminDashboard", express.static(path.join(__dirname, "../Dashboards/adminDashboard")));
 
 // Body parser middleware
 app.use(express.json());
@@ -38,11 +41,6 @@ app.get("/studentDashboard", function (req, res) {
 app.get("/adminDashboard", function (req,res){
   res.sendFile(path.join(__dirname, "../Dashboards/adminDashboard/adminDashboard.html"));
 });
-
-// app.get("/dashboard", function (req, res) {
-//   res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
-// });
-
 
 
 app.use("/", loginEndpoint);
