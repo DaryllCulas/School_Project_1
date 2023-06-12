@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../bootstrap.min.css">
+  <link rel="stylesheet" href="../adminDashboard.css">
+  <title>School Admin Dashboard</title>
+</head>
+<body>
+  <form action="/logout" method= "GET">
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">School Admin Dashboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="logoutLink" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+      <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img id="ITS-Logo" src="/assets/img/ITSLogo.png" alt="CVSU-ITS Logo"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Dashboards/adminDashboard/adminProfile/adminProfile.html">ADMIN PROFILE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../adminDashboard.html">RECORDS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">STUDENT REGISTRATION</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="Admin_Profile">
+      <h1>ADMIN PROFILE</h1>
+        <img id="adminPic" src="../adminProfile/adminPic.png" alt="Admin-icon">
+    </div>
+
+    <div class="Admin_ID">
+       <strong>FACULTY ID:<span id="facultyID"></span></strong>
+    </div>
+    <div class="Admin_FirstName">
+      <strong>FACULTY FIRST NAME:<span id="facultyFirstName"></span></strong>
+    </div>
+    <div class="Admin_LastName">
+      <strong>FACULTY LAST NAME:<span id="facultyLastName"></span></strong>
+    </div>
+    <div class="Admin_Email">
+      <strong>FACULTY EMAIL:<span id="facultyEmail"></span></strong>
+    </div>
+    <div class ="Admin_Password">
+      <strong>FACULTY PASSWORD:<span id="facultyPassword"></span></strong>
+    </div>
+  </div>
+</form>
+
+
+<script src="../jquery-3.5.1.slim.min.js"></script>
+<script src="../popper.min.js"></script>
+<script src="../bootstrap.min.js"></script>
+<script>
+  // Toggle sidebar on small screens
+  const sidebar = document.getElementById('sidebar');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+
+  navbarToggler.addEventListener('click', function () {
+    sidebar.classList.toggle('show');
+  });
+</script>
+</body>
+</html>
