@@ -7,7 +7,6 @@ router.get("/logout", (req, res) => {
   alert('Logging out...'); 
   window.location.href="../Portals/portal.html";
   </script>`);
-  // res.redirect("../Portals/portal.html");
 });
 
 
