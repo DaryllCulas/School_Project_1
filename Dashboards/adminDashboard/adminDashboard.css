@@ -1,5 +1,6 @@
 * {
   transition: background-color 0.2s ease-in-out;
+  box-sizing: border-box;
 }
 .sidebar {
   position: fixed;
@@ -61,4 +62,52 @@ h1 {
   .content {
     margin-left: 0;
   }
+}
+
+/* Admin Profile */
+
+#adminPic {
+  width: 20%;
+  height: auto;
+  margin-top: 5%;
+  border: 2px solid black;
+  padding: 20px 20px;
+  margin-bottom: 3%;
+}
+.Admin_ID {
+  display: flex;
+  border: 2px solid black;
+  width: 45%;
+  padding: 20px 30px;
+  margin-bottom: 25px;
+}
+.Admin_FirstName {
+  display: flex;
+  border: 2px solid black;
+  width: 45%;
+  padding: 20px 30px;
+  margin-bottom: 25px;
+}
+.Admin_LastName {
+  display: flex;
+  border: 2px solid black;
+  width: 45%;
+  padding: 20px 30px;
+  margin-bottom: 25px;
+}
+.Admin_Email {
+  display: flex;
+
+  border: 2px solid black;
+  width: 45%;
+  padding: 20px 30px;
+  margin-bottom: 25px;
+}
+.Admin_Password {
+  display: flex;
+ 
+  border: 2px solid black;
+  width: 45%;
+  padding: 20px 30px;
+ 
 }
