@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../adminDashboard.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <title>Student Registration Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+       }
+       body{
+           display: flex;
+           height: 100vh;
+           justify-content: center;
+           align-items: center;
+           background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/Bacoor-Campus-scaled.jpg');
+           background-size: cover;
+           background-repeat: no-repeat;
+           padding: 10px;
+       }
+       .container img{ 
+           width: 7vw;
+           height: 7vh;
+           margin-left: 40%;
+          
+       }
+       .container{
+           background-color: #fff;
+           padding: 20px 30px;
+           border-radius: 5px;
+           border: 2px solid black;
+       }
+       .container .title{
+           font-size: 25px;
+           font-weight: 500;
+           position: relative;
+         
+       }
+       .container .title::before{
+           content: '';
+           position: absolute;
+           height: 3px;
+           width: 30px;
+           left: 0;
+           bottom: 0;
+           background-color: green;
+       }
+       .container form .user-details{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           margin: 20px 0 12px 0;
+       }
+       form .user-details .input-box{
+           margin-bottom: 15px;
+           width: calc(100% / 2 - 20px);
+       }
+       .user-details .input-box .details{
+           display: block;
+           font-weight: 500;
+           margin-bottom: 5px;
+       }
+       .user-details .input-box input{
+           height: 45px;
+           width: 100%;
+           outline: none;
+           border-radius: 5px;
+           border: 1px solid #ccc;
+           padding-left: 15px;
+           font-size: 16px;
+           border-bottom-width: 2px;
+           transition: all 0.3s ease;
+       }
+       .user-details .input-box input:focus,
+       .user-details .input-box input:valid{
+           border-color: green;
+       }
+       form .button{
+           height: 45px;
+           margin: 45px 0;
+       }
+       form .button input{
+           height: 100%;
+           width: 100%;
+           outline: none;
+           color: #ccc;
+           border: none;
+           font-size: 18px;
+           font-weight: 500;
+           letter-spacing: 1px;
+           border-radius: 5px;
+           background-color: darkgreen;
+       }
+       form .button input:hover{
+           background-color: red;
+       }
+       @media (max-width: 584px) {
+           .container{
+               max-width: 100%;
+           }
+           form .user-details .input-box{
+               margin-bottom: 15px;
+               width: 100%;
+           }
+           .container form .user-details{
+               max-height: 300px;
+               overflow-y: scroll;
+           }
+       }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form action="/logout" method= "GET">
+            <!-- Header -->
+            <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand" href="#">CVSU-ITS REGISTRATION FORM</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" id="logoutLink" href="/logout">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </header>
+    
+      <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img id="ITS-Logo" src="/assets/img/ITSLogo.png" alt="CVSU-ITS Logo"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Dashboards/adminDashboard/adminProfile/adminProfile.html">ADMIN PROFILE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../adminDashboard.html">RECORDS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Dashboards/adminDashboard/Student_Registration/studentRegistrationForm.html">STUDENT REGISTRATION</a>
+      </li>
+    </ul>
+  </div>        
+    
+    <form id="main-form" name="main-form">
+
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Student First Name</span>
+                <input id="studentfirstname" name="studentfirstname" type="text" placeholder="Enter your First Name" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Student Last Name</span>
+                <input id="studentlastname" name="studentlastname" type="text" placeholder="Enter your Last Name" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Student ID</span>
+                <input id="studentid" name="studentid" type="text" placeholder="Enter your Student ID" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Year and Level</span>
+                <input id="yearandlevel" name="yearandlevel" type="text" placeholder="Enter your Year & Level" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Student Email</span>
+                <input id="studentemail" name="studentemail" type="email" placeholder="Enter your Email" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Student Password</span>
+                <input id="studentpassword" name="studentpassword" type="text" placeholder="Enter your Password" required>
+            </div>
+        </div>
+
+        <div class="button">
+            <input type="submit" value="Register">
+        </div>
+
+    </form>
+</div>
+<script src="../jquery-3.5.1.slim.min.js"></script>
+<script src="../popper.min.js"></script>
+<script src="../bootstrap.min.js"></script>
+<script>
+  // Toggle sidebar on small screens
+  const sidebar = document.getElementById('sidebar');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+
+  navbarToggler.addEventListener('click', function () {
+    sidebar.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
