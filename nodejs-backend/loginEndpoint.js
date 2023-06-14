@@ -44,8 +44,7 @@ router.post('/student_login', (req, res) => {
           alert("Login Successfully!");
           window.location.href = "${'/studentDashboard'}";
         </script>
-        `);
-          
+        `);        
       } else {
         res.send(`
         <script>
