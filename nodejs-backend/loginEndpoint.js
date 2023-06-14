@@ -155,4 +155,47 @@ router.get('/recordsets', (req, res) => {
   });
 });
 
+// Update the endpoint for updating a record
+router.put('/recordsets/update/:id', (req, res) => {
+  const { id } = req.params;
+  const { studentFirstName, studentLastName, YearLevelAndSection, studentEmail, studentPassword } = req.body;
+
+  const pool = new mssql.ConnectionPool(config);
+  pool.connect((err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send('Server error');
+    }
+
+    const request = new mssql.Request(pool);
+    const query = `
+      UPDATE ITstudent
+      SET studentFirstName = @studentFirstName,
+          studentLastName = @studentLastName,
+          YearLevelAndSection = @YearLevelAndSection,
+          studentEmail = @studentEmail,
+          studentPassword = @studentPassword
+      WHERE studentID = @id
+    `;
+
+    request.input('studentFirstName', mssql.NVarChar, studentFirstName);
+    request.input('studentLastName', mssql.NVarChar, studentLastName);
+    request.input('YearLevelAndSection', mssql.NVarChar, YearLevelAndSection);
+    request.input('studentEmail', mssql.NVarChar, studentEmail);
+    request.input('studentPassword', mssql.NVarChar, studentPassword);
+    request.input('id', mssql.NVarChar, id);
+
+    request.query(query, (err, result) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send('Server error');
+      }
+
+      // Return a success message or relevant data if needed
+      res.send('<script>alert("Updated Successfully!");</script>');
+    });
+  });
+});
+
+
 module.exports = router;
