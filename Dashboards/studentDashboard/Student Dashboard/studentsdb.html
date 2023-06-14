@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT-DASHBOARD</title>
+    <style>
+         body{
+            background: rgba(0,0,0,0.5) url(cvsu.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: darken;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+       }
+       
+       .logo{
+           font-size: 3vmin;
+           color: white;
+       }
+       .header a{
+           text-decoration: none;
+       }
+       .nav{
+           background-color: white;
+           color: white;
+           width: 15%;
+           height: 94vh;
+           font-family: sans-serif;
+           font-size: 3vmin;
+           float: left;
+           padding-top: 3%;
+           position: fixed;
+           margin-botton: 20%;
+           
+       }
+       .nav .logo{
+           margin-left: 18%;
+           color: green;
+           font-size: 2vw;
+           font-weight: bold;
+           padding-top: 20%;
+           border-bottom: 2px solid white;
+       }
+       .nav #log{
+           background-color: black;
+           font-size: 1.5vw;
+           margin-left: 33%;
+           color: white;
+           padding: 3%;
+           
+       }
+       .nav img{
+           width: 50%;
+           border-radius: 50%;
+           margin-left: 23%;
+           margin-top: 18%;
+           border: 2px solid black;
+       }
+       a{
+           text-decoration: none;
+           color: black;
+           
+       }
+       .nav ul{
+           padding-left: 0;
+           margin-top: 20%;
+       }
+       .nav ul li{
+           list-style: none;
+           padding-bottom: 15%;
+           margin-left: 33%;
+           font-size: 1.5vw;
+           
+       }
+       ul li a:hover{
+              color: white;
+              background-color: green;
+              padding: 5%;
+       }
+       #log:hover{
+           background-color: red;
+       }
+
+       #section-0{  
+            color: black;
+       }
+       #section-0 h1{
+           color: white;
+           margin-left: 25%;
+           width: 65%;
+           text-align: center;
+           font-size: 2vw;
+           font-family: Arial, Helvetica, sans-serif;
+           border-bottom: 2px solid black;
+       }
+       #section-0 p{
+           margin-left: 17%;
+           color: white;
+           text-align: center;
+           height: 90vh;
+          
+       }
+       #section-1 {
+           background-color: white;
+           margin-left: 25%;
+           width: 65%;
+           height: 100vh;
+       }
+
+       #section-1 h1{
+           color: black;
+           margin-left: 1%;
+           text-align: center;
+           font-size: 2vw;
+           font-family: Arial, Helvetica, sans-serif;
+          
+       }
+       .info{
+           border: 2px solid yellow;
+           width: 90%;
+           margin-left: 4.5%;
+       }
+       .info p{
+           padding-left: 2%;
+           font-size: 1vw;
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: bold;
+           padding-bottom: 2%;
+           margin-top: 2.5%;
+       }
+       h4{
+           float: right;
+           margin-right: 53%;
+           margin-top: 1.7%;
+           width: 8vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+          
+       }
+       .course{
+           float: right;
+           margin-right: 53%;
+           margin-top: 0.1%;
+           width: 8vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+       }
+
+       .yearlevel{
+           float: right;
+           margin-right: 53%;
+           margin-top: 0.1%;
+           width: 8vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+       }
+       .std{
+           width: 15%;
+           border: 2px solid black;
+           float: right;
+           margin-bottom: 2%;
+           margin-right: 4%;
+           margin-top: 2%;
+       }
+      
+       .line{
+           border-bottom: 2px solid grey;
+           width: 90%;
+           margin-left: 5%;
+       }
+
+       .name{
+           display: flex;
+           margin-left: 1%;
+           text-align: center;
+           height: 5%;
+           font-family: Arial, Helvetica, sans-serif;
+           margin-left: 9%;
+           
+       }
+       .name p{
+           margin-left: 9%;
+           border: 1px solid grey;
+           width: 8vw;
+           border-radius: 5px;
+           padding: 1%;
+           font-size: 1vw;
+       }
+       .name .rey{
+           margin-right: 2%;
+           border: 1px solid grey;
+           width: 8vw;
+           margin-left: 10%;
+           border-radius: 5px;
+           padding: 1%;
+           font-size: 1vw;
+           
+       }
+       .names{
+           display: flex;
+           margin-left: 5%;
+           text-align: center;
+           height: 5%;
+           font-family: Arial, Helvetica, sans-serif;
+           padding-bottom: 5%;
+       }
+       .names p{
+           margin-left: 7%;
+           width: 8vw;
+           padding: 1%;
+           font-size: 1vw;
+       }
+
+       .names .fn{
+           margin-right: 2%;
+           width: 8vw;
+           margin-left: 10%;
+           padding: 1%;
+           font-size: 1vw;
+           
+       }
+
+       .stdinfo{
+           display: flex;
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 1vw;
+           margin-left: 16%;
+           
+       }
+       .stdinfo p{ 
+           margin-right: 5%;
+           margin-top: 2%;
+
+       }
+       .stdinfo .num{
+           margin-top: 1%;
+           width: 8vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+       }
+
+        .stdinfo .gen{
+           margin-top: 1%;
+           width: 8vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+          
+       }
+
+       .stdinfor{
+           display: flex;
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 1vw;
+           margin-left: 16%;
+       }
+       .stdinfor p{ 
+           margin-right: 4.8%;
+           margin-top: 2%;
+
+       }
+       .stdinfor .age{
+           margin-top: 1%;
+           width: 8vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+           margin-left: 12%;
+       }
+       .stdinfor .birth{
+           margin-top: 1%;
+           width: 8vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+          
+       }
+
+       .stdinform{
+           display: flex;
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 1vw;
+           margin-left: 16%;
+       }
+       .stdinform p{ 
+           margin-right: 5%;
+           margin-top: 2%;
+       }
+       .stdinform .contact{
+           margin-top: 1%;
+           width: 8vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+       }
+       .stdinform .mail{
+           margin-top: 1%;
+           width: 13vw;
+           font-size: 1vw;
+           height: 2.5%;
+           border: 1px solid grey;
+           padding: 0.5%;
+           border-radius: 5px;
+           font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+           margin-bottom: 0;
+           margin-left: 2%;
+          
+       }
+
+       #section-2 {
+            background: rgba(0,0,0,0.5) url(cvsu.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: darken;
+            margin-left: 10%;
+            width: 90%;
+            height: 300vh;
+            color: white;
+
+       }
+       .sec-content{
+           background-color: white;
+           margin-left: 11%;
+           width: 83%;
+           height: 280vh;
+           color: black;
+           padding-left: 2%;
+           font-size: 1vw;
+           font-weight: bold;
+       }
+       .sec-content h1{
+           font-size: 2vw;
+           text-align: center;
+           font-family: Arial, Helvetica, sans-serif;
+       }
+       .sec-content p{
+           margin-left: 11%;
+           font-family: Arial, Helvetica, sans-serif;
+           
+       }
+       .sec-content .sy{
+            text-align: center;
+            margin-right: 11%;
+            font-family: Arial, Helvetica, sans-serif;
+       }
+       table{
+           width: 75%;
+           border-collapse: collapse;
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 1vw;
+           font-weight: 500;
+           margin-left: 11%;
+
+       }
+       table td, table th{
+           text-align: center;
+           padding: 3%, 4%;
+           border: 2px solid green;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="a" class="logo">CVSU-ITS</a>
+        <img src="student.jpg" alt="error">
+        <ul>
+            <li><a href="#section-0">Home</a></li>
+            <li><a href="#section-1">Profile</a></li>
+            <li><a href="#section-2">Checklist</a></li>
+        </ul>
+        <a href="/logout" id="log">Logout</a>
+    </div>
+
+    <div id="section-0">.
+        <h1>HOME</h1>
+
+        <p>CvSU is mandated “to provide excellent, equitable and relevant educational opportunities in the arts, sciences and technology through quality instruction, and responsive research and development activities. It shall produce professional, skilled and morally upright individuals for global competitiveness.”</p>
+    </div>
+
+    <div id="section-1">.
+        <h1>Personal Information</h1>
+        <div class="info">
+            <img class="std" src="profile.jpg" alt="error">
+        <h4>Bacoor</h4>
+        <p>Campus</p>  
+        
+        <h4 class="course">BSIT</h4>
+        <p>Course</p>
+        
+        <h4 class="yearlevel"> 2nd year</h4>
+        <p>Year Level</p>
+
+        <div class="line"></div>
+
+        <div class="name">
+            <p class="rey" >Rey</p>
+            <p>Esquillo</p>
+            <p>Lagaras</p>
+        </div>
+
+        <div class="names">
+            <p class="fn" >First Name</p>
+            <p>Last Name</p>
+            <p>Middle Name</p>
+        </div>
+
+
+        <div class="stdinfo">
+            <p>Student Number</p>
+            <p class="num" >202311633</p>
+            <p>Gender</p>
+            <p class="gen" >Male</p>
+        </div>
+
+        <div class="stdinfor">
+            <p>Age</p>
+            <p class="age" >20</p>
+            <p>Birthday</p>
+            <p class="birth" >11/13/2002</p>
+        </div>
+
+        <div class="stdinform">
+            <p>Contact Number</p>
+            <p class="contact" >09164300901</p>
+            <p>Email</p>
+            <p class="mail" >rey.esquiilo@cvsu.edu.ph</p>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="section-2">.
+        <div class="sec-content">
+          <h1>Checklist</h1>
+
+          <p class="sy">SECOND YEAR</p>
+          <p>First Semester</p>
+          <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Description</th>
+                <th colspan="4">Units</th>
+            </tr>
+
+            <tr>
+                <td>GNED 04</td>
+                <td>Mga Babasahin Hingil sa Ksaysayan ng Pilipinas</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>GNED 07</td>
+                <td>The Contemporary World</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>GNED 10</td>
+                <td>Gender and Society</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>GNED 14</td>
+                <td>Panitikang Panlipunan</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td>GNED 10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 55</td>
+                <td>Platform Technologies</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>DCIT 23</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>DCIT 24</td>
+                <td>Information Management</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>DCIT 23</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>DCIT 50</td>
+                <td>Object Oriented Programming</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>DCIT 23</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>FITT 3</td>
+                <td>Physical Activities towards Health and Fitness 1</td>
+                <td>2</td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>FITT 1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">sub-total</td>
+                <td>20</td>
+                <td>5</td>
+                <td>20</td>
+                <td>9</td>
+                <td></td>
+                <td colspan="3">Adviser:___________</td>
+            </tr>
+          </table>
+
+
+          <p>2nd Semester</p>
+
+          <table>
+              <tr>
+                  <th>Course Code</th>
+                  <th>Course Description</th>
+                  <th colspan="4">Units</th>
+              </tr>
+
+              <tr>
+                  <td>GNED 08</td>
+                  <td>Understanding the self</td>
+                  <td>3</td>
+                  <td></td>
+                  <td>3</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+
+              <tr>
+                  <td>DCIT 25</td>
+                  <td>Data Structure and Algorithms</td>
+                  <td>2</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>DCIT 50</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+
+              <tr>
+                  <td>ITEC 60</td>
+                  <td>Integrated Programming and Technologies 1</td>
+                  <td>2</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>DCIT 50 & ITEC 55</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+
+              <tr>
+                <td>ITEC 65</td>
+                <td>Open Source technology</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>2nd Year Standing</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              
+              <tr>
+                <td>DCIT 55</td>
+                <td>Advanced Database System</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>DCIT 24</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              
+              <tr>
+                <td>ITEC 70</td>
+                <td>Multimedia System</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>2nd Year Standing</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>FIIT 4</td>
+                <td>Physical Activities towards health and Fitness II</td>
+                <td>2</td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>FIIT 1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>COSC 50</td>
+                <td>Discrete Structure</td>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                  <td colspan="2">Sub-total</td>
+                  <td>15</td>
+                  <td>5</td>
+                  <td>15</td>
+                  <td>15</td>
+                  <td></td>
+                  <td colspan="3">Adviser: ___________</td>
+              </tr>
+          </table>
+
+          <p class="sy">Mid Year</p>
+
+          <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Description</th>
+                <th colspan="4">Units</th>
+            </tr>
+
+            <tr>
+                <td>STAT 2</td>
+                <td>Applied Statistics</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td>2nd Year Standline</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 75</td>
+                <td>System Integration and Architecture 1</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 60</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Sub-total</td>
+                <td>5</td>
+                <td>1</td>
+                <td>5</td>
+                <td>3</td>
+                <td></td>
+                <td colspan="3">Adviser:___________</td>
+            </tr>
+          </table>
+
+          <p class="sy">THIRD YEAR</p>
+          <p>First Semester</p>
+          <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Description</th>
+                <th colspan="4">Units</th>
+            </tr>
+
+            <tr>
+                <td>ITEC 80</td>
+                <td>Introduction to Human Computer Interaction</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>3rd Year Standing</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 85</td>
+                <td>Information Assurance and Security 1</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 75</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 90</td>
+                <td>Network Fundamentals</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 55</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>DCIT 26</td>
+                <td>Application Development and Emerging Technologies</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>DCIT 55</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>DCIT 60</td>
+                <td>Methods of Research</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td>3rd Year Standing</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Sub-total</td>
+                <td>13</td>
+                <td>5</td>
+                <td>13</td>
+                <td>15</td>
+                <td></td>
+                <td colspan="3">Adviser: _____________</td>
+            </tr>
+        </table>
+
+        <p>Second Semester</p>
+        <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Description</th>
+                <th colspan="4">Units</th>
+            </tr>
+
+            <tr>
+                <td>GNED 09</td>
+                <td>Rizal: Life, Works, and Writings</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td>GNED 4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 95</td>
+                <td>Quantitive Methods (Modeling & Simulation)</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td>COSC 50 & STAT 2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 101</td>
+                <td>IT ELECTIVE 1 (Human Computer Interaction 2)</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 80</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 106</td>
+                <td>IT ELECTIVE 2 (Human Computer Interaction 2)</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 50</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 100</td>
+                <td>Information Assurance and Security 2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 85</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 105</td>
+                <td>Network Management</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 90</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 200A</td>
+                <td>Capstone Project and Research 1</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td>DCIT 60, DCIT 26, ITEC 85, 70% total units taken</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Sub-total</td>
+                <td>17</td>
+                <td>4</td>
+                <td>17</td>
+                <td>12</td>
+                <td></td>
+                <td colspan="3">Adviser:____________</td>
+            </tr>
+        </table>
+
+        <p class="sy">FOURTH Year</p>
+          <p>First Semester</p>
+          <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Description</th>
+                <th colspan="4">Units</th>
+            </tr>
+
+            <tr>
+                <td>ITEC 65</td>
+                <td>Social and professional issues</td>
+                <td>3</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td>3rd Year Standing</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 111</td>
+                <td>ITEC ELECTIVE 3 (Integrated Programming and Technologies 2)</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 60</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 116</td>
+                <td>ITEC ELECTIVE 4 (Systems Integration Programming and Architecture 2)</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 75</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 110</td>
+                <td>System Administartion and Maintenance</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>ITEC 100</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>ITEC 200B</td>
+                <td>Capstone Project and Research 2</td>
+                <td>2</td>
+                <td></td>
+                <td>3</td>
+                <td></td>
+                <td>ITEC 200A</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Sub-Total</td>
+                <td>12</td>
+                <td>3</td>
+                <td>12</td>
+                <td>9</td>
+                <td></td>
+                <td colspan="3">Adviser:___________</td>
+            </tr>
+        </table>
+
+        <p>Second Semester</p>
+          <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Description</th>
+                <th colspan="4">Units</th>
+            </tr>
+
+            <tr>
+                <td>ITEC 199</td>
+                <td>Practicum (Minimum 486 hours)</td>
+                <td>6</td>
+                <td></td>
+                <td>6</td>
+                <td></td>
+                <td>DCIT 26, ITEC 85, 70% total units taken</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Sub-Total</td>
+                <td>6</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+                <td></td>
+                <td colspan="3"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Grand-Total</td>
+                <td>155</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="3">Adviser:___________</td>
+            </tr>
+
+          </table>
+
+
+
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
