@@ -21,6 +21,8 @@ app.use("/",express.static(path.join(__dirname, "../")));
 // Middleware for serving static adminDashboard 
 app.use("/adminDashboard", express.static(path.join(__dirname, "../Dashboards/adminDashboard")));
 
+// Middleware for serving static studentDashboard
+app.use("/studentDashboard", express.static(path.join(__dirname, "../Dashboards/studentDashboard/Student Dashboard")));
 // Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -33,7 +35,7 @@ app.get("/", (req, res) => {
 
 // Dashboard endpoint for student
 app.get("/studentDashboard", function (req, res) {
-  res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/studentDashboard.html"));
+  res.sendFile(path.join(__dirname, "../Dashboards/studentDashboard/Student Dashboard/studentsdb.html"));
 });
 
 
