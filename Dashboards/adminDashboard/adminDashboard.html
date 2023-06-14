@@ -63,7 +63,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+
+
+
+					<!-- <tr>
 						<td>2023001</td>
 						<td>John</td>
 						<td>Doe</td>
@@ -86,8 +89,9 @@
 							<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal" onclick="editUser('2023002')">Edit</button>
 							<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal" onclick="deleteUser('2023002')">Delete</button>
 						</td>
-					</tr>
+					</tr> -->
 					<!-- Add more rows here -->
+					
 				</tbody>
 			</table>
 		</div>
@@ -162,6 +166,37 @@
     navbarToggler.addEventListener('click', function () {
       sidebar.classList.toggle('show');
     });
+
+		function fetchRecords() {
+        fetch('/recordsets')
+            .then(response => response.json())
+            .then(data => {
+                // Iterate over the fetched data and create table rows dynamically
+                data.forEach(record => {
+                    const tableRow = document.createElement("tr");
+                    tableRow.innerHTML = `
+                        <td>${record.studentID}</td>
+                        <td>${record.studentFirstName}</td>
+                        <td>${record.studentLastName}</td>
+                        <td>${record.YearLevelAndSection}</td>
+                        <td>${record.studentEmail}</td>
+                        <td>${record.studentPassword}</td>
+                        <td class="table-actions">
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal" onclick="editUser('${record.studentID}')">Edit</button>
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal" onclick="deleteUser('${record.studentID}')">Delete</button>
+                        </td>
+                    `;
+                    document.querySelector("tbody").appendChild(tableRow);
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching records:", error);
+            });
+    }
+
+    // Call the fetchRecords function when the page is loaded
+    window.addEventListener("load", fetchRecords);
+		
   </script>
 </body>
 </html>
