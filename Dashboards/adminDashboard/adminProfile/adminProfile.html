@@ -55,10 +55,10 @@
       <strong>FACULTY FIRST NAME:&nbsp;<span id="facultyFirstName" style="color:green"></span></strong>
     </div>
     <div class="Admin_LastName">
-      <strong>FACULTY LAST NAME:&nbsp;<span id="facultyLastName" style="color:green"></span></strong>
+      <strong>FACULTY LAST NAME:&nbsp;<span id="facultyLastName" style="color:green "></span></strong>
     </div>
     <div class="Admin_Email">
-      <strong>FACULTY EMAIL:&nbsp;<span id="facultyEmail" style="color:green"></span></strong>
+      <strong>FACULTY EMAIL:&nbsp;<span id="facultyEmail" style="color:green;"></span></strong>
     </div>
     <div class ="Admin_Password">
       <strong>FACULTY PASSWORD:&nbsp;<span id="facultyPassword" style="color:green"></span></strong>
@@ -80,7 +80,6 @@
     sidebar.classList.toggle('show');
   });
 
-  // Fetch admin profile data
   // Fetch admin profile data
   fetch('/admin_profile_data')
     .then((response) => response.json())
