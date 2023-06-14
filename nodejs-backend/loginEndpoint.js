@@ -86,5 +86,28 @@ router.post('/admin_login',(req, res) => {
 });
 
 
+// API endpoint for fetching recordsets
+router.get('/recordsets', (req, res) => {
+  const pool = new mssql.ConnectionPool(config);
+  pool.connect((err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send('Server error');
+    }
+
+    const request = new mssql.Request(pool);
+    const query = 'SELECT * FROM ITstudent';
+
+    request.query(query, (err, recordset) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send('Server error');
+      }
+
+      res.json(recordset.recordset);
+    });
+  });
+});
+
 module.exports = router;
 
