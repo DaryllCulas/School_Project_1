@@ -81,7 +81,6 @@ router.post('/admin_login',(req, res) => {
       if (recordset.recordset.length > 0) {
         // Store admin's credentials in the session
         req.session.admin = recordset.recordset[0];
-
         res.send(`
         <script>
           alert("Login Successfully");
