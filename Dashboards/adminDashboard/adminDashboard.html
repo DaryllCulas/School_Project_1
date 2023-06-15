@@ -185,8 +185,6 @@ function editUser(studentID, studentFirstName, studentLastName, YearLevelAndSect
 }
 
 
-
-
 // Update the saveChanges function
 function saveChanges() {
 	const form = document.getElementById("editForm");
@@ -196,7 +194,7 @@ function saveChanges() {
 	const YearLevelAndSection = form.querySelector("#YearLevelAndSection").value;
 	const studentEmail = form.querySelector("#studentEmail").value;
 	const studentPassword = form.querySelector("#studentPassword").value;
-	
+
     const studentData = {
       studentID,
       studentFirstName,
