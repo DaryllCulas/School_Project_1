@@ -1,4 +1,4 @@
-// Server Config
+ // Server Config
 const config = {
   user: "sa",
   password: "M@kar0v99",
