@@ -77,25 +77,24 @@
         </div>
         <div class="modal-body">
           <!-- Add edit form here -->
-					<form id="editForm">
-						<input type="hidden" id="studentID" name="studentID">
-						<label for="studentFirstName">Student First Name:</label>
-						<input type="text" id="studentFirstName" name="studentFirstName"><br><br>
-						<label for="studentLastName">Student Last Name:</label>
-						<input type="text" id="studentLastName" name="studentLastName"><br><br>
-						<label for="YearLevelAndSection">Year Level & Section:</label>
-						<input type="text" id="YearLevelAndSection" name="YearLevelAndSection"><br><br>
-						<label for="studentEmail">Email Address:</label>
-						<input type="email" id="studentEmail" name="studentEmail"><br><br>
-						<label for="studentPassword">Password:</label>
-						<input type="text" id="studentPassword" name="studentPassword"><br><br>
-					</form>
-					
+          <form id="editForm">
+            <input type="hidden" id="studentID" name="studentID">
+            <label for="studentFirstName">Student First Name:</label>
+            <input type="text" id="studentFirstName" name="studentFirstName"><br><br>
+            <label for="studentLastName">Student Last Name:</label>
+            <input type="text" id="studentLastName" name="studentLastName"><br><br>
+            <label for="YearLevelAndSection">Year Level & Section:</label>
+            <input type="text" id="YearLevelAndSection" name="YearLevelAndSection"><br><br>
+            <label for="studentEmail">Email Address:</label>
+            <input type="email" id="studentEmail" name="studentEmail"><br><br>
+            <label for="studentPassword">Password:</label>
+            <input type="text" id="studentPassword" name="studentPassword"><br><br>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           <button type="button" class="btn btn-primary" onclick="saveChanges()">Save Changes</button>
-        </div>
+        </div>        
       </div>
     </div>
   </div>
@@ -124,121 +123,10 @@
 <!-- Bootstrap JS -->
 <script src="jquery-3.5.1.slim.min.js"></script>
 <script src="popper.min.js"></script>
-<script src="bootstrap.min.js"></script>
-<script>
-  // Toggle sidebar on small screens
-  const sidebar = document.getElementById('sidebar');
-  const navbarToggler = document.querySelector('.navbar-toggler');
-
-  navbarToggler.addEventListener('click', function () {
-    sidebar.classList.toggle('show');
-  });
-
-  function fetchRecords() {
-    fetch('/recordsets')
-      .then(response => response.json())
-      .then(data => {
-        // Iterate over the fetched data and create table rows dynamically
-        data.forEach(record => {
-          const tableRow = document.createElement("tr");
-					// Inside the data.forEach loop
-					tableRow.setAttribute("data-id", record.studentID);
-          tableRow.innerHTML = `
-            <td>${record.studentID}</td>
-            <td>${record.studentFirstName}</td>
-            <td>${record.studentLastName}</td>
-            <td>${record.YearLevelAndSection}</td>
-            <td>${record.studentEmail}</td>
-            <td>${record.studentPassword}</td>
-            <td class="table-actions">
-              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal"
-                onclick="editUser('${record.studentID}', '${record.studentFirstName}', '${record.studentLastName}', '${record.YearLevelAndSection}', '${record.studentEmail}', '${record.studentPassword}')">Edit</button>
-              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal" onclick="deleteUser('${record.studentID}')">Delete</button>
-            </td>
-          `;
-          document.querySelector("tbody").appendChild(tableRow);
-        });
-      })
-      .catch(error => {
-        console.error("Error fetching records:", error);
-      });
-  }
-
-// Update the editUser function
-function editUser(studentID, studentFirstName, studentLastName, YearLevelAndSection, studentEmail, studentPassword) {
-	const editForm = document.getElementById("editForm");
-	const idInput = editForm.getElementById("studentID");
-	const firstNameInput = editForm.getElementById("studentFirstName");
-	const lastNameInput = editForm.getElementById("studentLastName");
-	const yearSectionInput = editForm.getElementById("YearLevelAndSection");
-	const emailInput = editForm.getElementById("studentEmail");
-	const passwordInput = editForm.getElementById("studentPassword");
-
-  editForm.parentElement.setAttribute("data-id", studentID); // Update this line
-
-	idInput.value = studentID;
-	firstNameInput.value = studentFirstName;
-	lastNameInput.value = studentLastName;
-	yearSectionInput.value = YearLevelAndSection;
-	emailInput.value = studentEmail;
-	passwordInput.value = studentPassword;
-}
-
-
-// Update the saveChanges function
-function saveChanges() {
-	const form = document.getElementById("editForm");
-	const studentID = form.parentElement.getAttribute("data-id"); // Update this line
-	const studentFirstName = form.querySelector("#studentFirstName").value;
-	const studentLastName = form.querySelector("#studentLastName").value;
-	const YearLevelAndSection = form.querySelector("#YearLevelAndSection").value;
-	const studentEmail = form.querySelector("#studentEmail").value;
-	const studentPassword = form.querySelector("#studentPassword").value;
-
-    const studentData = {
-      studentID,
-      studentFirstName,
-      studentLastName,
-      YearLevelAndSection,
-      studentEmail,
-      studentPassword
-    };
-
-    fetch(`/recordsets/update/${studentID}`, {
-      method: 'PUT',
-      body: JSON.stringify(studentData),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        $('#editModal').modal('hide');
-        const editedTableRow = document.querySelector(`tr[data-id="${studentID}"]`);
-        editedTableRow.innerHTML = `
-          <td>${studentID}</td>
-          <td>${studentFirstName}</td>
-          <td>${studentLastName}</td>
-          <td>${YearLevelAndSection}</td>
-          <td>${studentEmail}</td>
-          <td>${studentPassword}</td>
-          <td class="table-actions">
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal"
-              onclick="editUser('${studentID}', '${studentFirstName}', '${studentLastName}', '${YearLevelAndSection}', '${studentEmail}', '${studentPassword}')">Edit</button>
-            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal" onclick="deleteUser('${studentID}')">Delete</button>
-          </td>
-        `;
-      })
-      .catch(error => {
-        console.error("Error updating user record:", error);
-      });
-  }
-
-
-  // Call the fetchRecords function when the page is loaded
-  window.addEventListener("load", fetchRecords);
-</script>
+<script src="bootstrap.min.js"></script> 
+<script src ="adminDashboard.js"></script> 
+<!-------Axios JS-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </body>
 </html>
