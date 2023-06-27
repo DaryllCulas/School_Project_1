@@ -15,7 +15,7 @@
             <li><a href="#section-1">Profile</a></li>
             <li><a href="#section-2">Checklist</a></li>
         </ul>
-        <a href="loginform.html" id="log">Logout</a>
+        <a href="/logout" id="log">Logout</a>
     </div>
 
     <div id="section-1">.
@@ -23,52 +23,38 @@
         <div class="info">
             <img class="std" src="std-profile.png" alt="error">
         
-            <form id="form" name="form">
+        <form id="form" name="form">
 
-                
-                <div class="cours">
-                    <p>Course</p>
-                    <input type="text" id="course" name="course">
-                </div>
+            <div class="studentData"> 
+               <strong>STUDENT ID:&nbsp;</strong><span id="studentID" name="studentID"></span>
+               <br>
+            </div>
 
-                <div class="yearlev">
-                    <p>Year Level & Section</p>
-                    <input type="text" id="yearlevel" name="yearlevel">
-                </div>
+            <div class="studentData"> 
+                <strong>FIRST NAME:&nbsp;</strong><span id="studentFirstName" name="studentLastName"></span>
+                <br>
+            </div>
 
-                <div class="std-info">
-                    <input type="text" id="firstname" name="firstname">
-                    <input type="text" id="lastname" name="lastname">
-                    <input type="text" id="middlename" name="middlename">
-                </div>
+            <div class="studentData">
+                <strong>LAST NAME:&nbsp;</strong><span id="studentLastName" name="studentLastName"></span>
+                <br>
+            </div>
 
-                <div class="std-infor">
-                    <p class="fname">First Name</p>
-                    <p class="lname">Last Name</p>
-                    <p class="mname">Middle Name</p>
-                </div>
+            <div class="studentData">
+                <strong>YEAR-LEVEL AND SECTION:&nbsp;</strong><span id="YearLevelAndSection" name="YearLevelAndSection"></span>
+                <br>
+            </div>
+            <div class="studentData">
+                <strong>STUDENT EMAIL:&nbsp;</strong><span id="studentEmail" name="studentEmail"></span>
+                <br>
+            </div>
 
-                <div class="std-inform">
-                    <p>Student Number </p>
-                    <input type="number" id="studentnumber" name="studentnumber">
-                    <p>Gender</p>
-                    <input type="text" id="gender" name="gender">
-                </div>
+            <div class="studentData">
+                <strong>STUDENT PASSWORD: &nbsp;</strong><span id="studentPassword" name="studentPassword"></span>
 
-                <div class="std-informa">
-                    <p>Age</p>
-                    <input type="number" id="age" name="age">
-                    <p>Birthday</p>
-                    <input type="text" id="birthday" name="birthday">
-                </div>
+            </div>
 
-                <div class="std-information">
-                    <p>Contact Number</p>
-                    <input type="number" id="contactnumber" name="contactnumber">
-                    <p>Email</p>
-                    <input type="email" id="email" name="email">
-                </div>
-            </form>
+        </form>
         </div>   
 
 
