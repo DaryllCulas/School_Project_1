@@ -112,6 +112,7 @@ ul li a:hover{
 }
 span {
    color: rgb(15, 128, 15);
+   font-weight: bolder;
 }
 .studentData {
    margin-bottom: 50px;
