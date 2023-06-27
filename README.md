@@ -1,4 +1,4 @@
-# School_Project_1: Student Profiling System
+# School_Project_1: BSIT Student Profiling System
 # CVSU-ITS Unofficial Website
 This is school project only
 
