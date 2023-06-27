@@ -1,12 +1,14 @@
-//  // Fetch admin profile data
-//  fetch('/admin_profile_data')
-//  .then((response) => response.json())
-//  .then((data) => {
-//    const adminData = data[0]; // Assuming there is only one admin in the database
-//    document.getElementById('facultyID').textContent = adminData.facultyID;
-//    document.getElementById('facultyFirstName').textContent = adminData.facultyFirstName;
-//    document.getElementById('facultyLastName').textContent = adminData.facultyLastName;
-//    document.getElementById('facultyEmail').textContent = adminData.facultyEmail;
-//    document.getElementById('facultyPassword').textContent = adminData.facultyPassword;
-//  })
-//  .catch((error) => console.log(error));
+// Fetch student profile data
+
+fetch('/student_profile_data')
+.then((response) => response.json())
+.then((data) => {
+    const studentData = data[0];
+    document.getElementById('studentID').textContent = studentData.studentID;
+    document.getElementById('studentFirstName').textContent = studentData.studentFirstName;
+    document.getElementById('studentLastName').textContent = studentData.studentLastName;
+    document.getElementById('YearLevelAndSection').textContent = studentData.YearLevelAndSection;
+    document.getElementById('studentEmail').textContent = studentData.studentEmail;
+    document.getElementById('studentPassword').textContent = studentData.studentPassword;
+})
+.catch((error) => console.log(error));
