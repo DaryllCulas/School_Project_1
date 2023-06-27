@@ -110,6 +110,14 @@ ul li a:hover{
    font-family: Arial, Helvetica, sans-serif;
   
 }
+span {
+   color: rgb(15, 128, 15);
+}
+.studentData {
+   margin-bottom: 50px;
+   margin-left: 30px;
+   margin-top: 10px;
+}
 .info{
    border: 2px solid yellow;
    width: 90%;
@@ -128,141 +136,13 @@ ul li a:hover{
    margin-left: 3%;
    margin-top: 3%;
 }
-.cours{
-  display: flex;
-  margin-left: 3%;
 
-}
-.yearlev{
-   display: flex;
-   margin-left: 3%;
-}
-
-#campus{
-   margin-top: 1.5%;
-   margin-left: 6%;
-   width: 10vw;
-   height: 10%;
-   border-radius: 5px;
-   font-size: 1.2vw;
-}
-#course{
-    margin-top: 1.5%;
-    margin-left: 7%;
-    border-radius: 5px;
-    width: 10vw;
-    height: 3%;
-    font-size: 1.2vw;
-}
-#yearlevel{
-    margin-top: 1.5%;
-    margin-left: 3.8%;
-    border-radius: 5px;
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-}
-.std-info{
-   display: flex;
-   margin-left: 16%;
-   margin-top: 1%;
-}
-#firstname{
-    width: 10vw;
-    height: 12%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-}
-#lastname{
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-    margin-left: 6%;
-}
-#middlename{
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-    margin-left: 6%;
-}
-.std-infor{
-   display: flex;
-   margin-left: 19%;
-}
-.lname{
-   margin-left: 16%;
-}
-.mname{
-   margin-left: 16%;
-}
-.std-inform{
-   display: flex;
-   margin-left: 15%;
-}
-#studentnumber{
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-    margin-left: 4%;
-    margin-top: 1.5%;
-}
-#gender{
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-    margin-left: 4%;
-    margin-top: 1.5%;
-}
-.std-informa{
-   display: flex;
-   margin-left: 15%;
-}
-#age{
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-    margin-left: 16%;
-    margin-top: 1.5%;
-}
-#birthday{
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-    margin-left: 3%;
-    margin-top: 1.5%;
-}
-.std-information{
-   display: flex;
-   margin-left: 15%;
-}
-#contactnumber{
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-    margin-left: 4%;
-    margin-top: 1.5%;
-}
-#email{
-    width: 10vw;
-    height: 10%;
-    font-size: 1.2vw;
-    border-radius: 5px;
-    margin-left: 6%;
-    margin-top: 1.5%;
-}
 .std{
    width: 15%;
    border: 2px solid black;
    float: right;
    margin-bottom: 2%;
-   margin-right: 4%;
+   margin-right: 5%;
    margin-top: 4%;
 }
 #section-2 {
