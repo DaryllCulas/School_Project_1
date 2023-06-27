@@ -68,7 +68,7 @@
     window.saveChanges = function () {
       // Get the form data
       const formData = new FormData(document.getElementById('editForm'));
-      console.log(formData);
+      // console.log(formData);
       const updatedRecord = {};
       for (let [key, value] of formData.entries()) {
         updatedRecord[key] = value;
