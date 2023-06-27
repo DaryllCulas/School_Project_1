@@ -131,6 +131,38 @@ router.get('/admin_profile_data', (req, res) => {
   });
 });
 
+// Endpoint for fetching student profile data
+router.get('/student_profile_data', (req, res) => {
+  if (!req.session.student) {
+    return res.status(401).send('Unauthorized');
+  }
+
+  const pool = new mssql.ConnectionPool(config);
+  pool.connect((err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send('Server error');
+    }
+
+    const request = new mssql.Request(pool);
+    const studentID = req.session.student.studentID;
+    const query = `SELECT * FROM ITstudent WHERE studentID = '${studentID}'`;
+
+    request.query(query, (err, recordset) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send('Server error');
+      }
+
+      if (recordset.recordset.length === 0) {
+        return res.status(404).send('Student not found');
+      }
+
+      res.json(recordset.recordset);
+    });
+  });
+});
+
 
 // API endpoint for fetching recordsets
 router.get('/recordsets', (req, res) => {
