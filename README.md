@@ -1,4 +1,4 @@
-# School_Project_1
+# School_Project_1: Student Profiling System
 # CVSU-ITS Unofficial Website
 This is school project only
 
