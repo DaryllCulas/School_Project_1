@@ -1,0 +1,316 @@
+body{
+    background: rgba(0,0,0,0.5) url(cvsu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.logo{
+   font-size: 3vmin;
+   color: white;
+}
+.header a{
+   text-decoration: none;
+}
+.nav{
+   background-color: white;
+   color: white;
+   width: 15%;
+   height: 94vh;
+   font-family: sans-serif;
+   font-size: 3vmin;
+   float: left;
+   padding-top: 3%;
+   position: fixed;
+   margin-botton: 20%;
+   
+}
+.nav .logo{
+   margin-left: 18%;
+   color: green;
+   font-size: 2vw;
+   font-weight: bold;
+   padding-top: 20%;
+   border-bottom: 2px solid white;
+}
+.nav #log{
+   background-color: black;
+   font-size: 1.5vw;
+   margin-left: 33%;
+   color: white;
+   padding: 3%;
+   
+}
+.nav img{
+   width: 50%;
+   border-radius: 50%;
+   margin-left: 23%;
+   margin-top: 18%;
+   border: 2px solid black;
+}
+a{
+   text-decoration: none;
+   color: black;
+   
+}
+.nav ul{
+   padding-left: 0;
+   margin-top: 20%;
+}
+.nav ul li{
+   list-style: none;
+   padding-bottom: 15%;
+   margin-left: 33%;
+   font-size: 1.5vw;
+   
+}
+ul li a:hover{
+      color: white;
+      background-color: green;
+      padding: 5%;
+}
+#log:hover{
+   background-color: red;
+}
+
+#section-0{  
+    color: black;
+}
+#section-0 h1{
+   color: white;
+   margin-left: 25%;
+   width: 65%;
+   text-align: center;
+   font-size: 2vw;
+   font-family: Arial, Helvetica, sans-serif;
+   border-bottom: 2px solid black;
+}
+#section-0 p{
+   margin-left: 17%;
+   color: white;
+   text-align: center;
+   height: 90vh;
+  
+}
+#section-1 {
+   background-color: white;
+   margin-left: 25%;
+   width: 65%;
+   height: 100vh;
+}
+
+#section-1 h1{
+   color: black;
+   margin-left: 1%;
+   text-align: center;
+   font-size: 2vw;
+   font-family: Arial, Helvetica, sans-serif;
+  
+}
+.info{
+   border: 2px solid yellow;
+   width: 90%;
+   margin-left: 4.5%;
+}
+.info p{
+   padding-left: 2%;
+   font-size: 1vw;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   padding-bottom: 2%;
+   margin-top: 2.5%;
+}
+.camp{
+   display: flex;
+   margin-left: 3%;
+   margin-top: 3%;
+}
+.cours{
+  display: flex;
+  margin-left: 3%;
+
+}
+.yearlev{
+   display: flex;
+   margin-left: 3%;
+}
+
+#campus{
+   margin-top: 1.5%;
+   margin-left: 6%;
+   width: 10vw;
+   height: 10%;
+   border-radius: 5px;
+   font-size: 1.2vw;
+}
+#course{
+    margin-top: 1.5%;
+    margin-left: 7%;
+    border-radius: 5px;
+    width: 10vw;
+    height: 3%;
+    font-size: 1.2vw;
+}
+#yearlevel{
+    margin-top: 1.5%;
+    margin-left: 3.8%;
+    border-radius: 5px;
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+}
+.std-info{
+   display: flex;
+   margin-left: 16%;
+   margin-top: 1%;
+}
+#firstname{
+    width: 10vw;
+    height: 12%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+}
+#lastname{
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    margin-left: 6%;
+}
+#middlename{
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    margin-left: 6%;
+}
+.std-infor{
+   display: flex;
+   margin-left: 19%;
+}
+.lname{
+   margin-left: 16%;
+}
+.mname{
+   margin-left: 16%;
+}
+.std-inform{
+   display: flex;
+   margin-left: 15%;
+}
+#studentnumber{
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    margin-left: 4%;
+    margin-top: 1.5%;
+}
+#gender{
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    margin-left: 4%;
+    margin-top: 1.5%;
+}
+.std-informa{
+   display: flex;
+   margin-left: 15%;
+}
+#age{
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    margin-left: 16%;
+    margin-top: 1.5%;
+}
+#birthday{
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    margin-left: 3%;
+    margin-top: 1.5%;
+}
+.std-information{
+   display: flex;
+   margin-left: 15%;
+}
+#contactnumber{
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    margin-left: 4%;
+    margin-top: 1.5%;
+}
+#email{
+    width: 10vw;
+    height: 10%;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    margin-left: 6%;
+    margin-top: 1.5%;
+}
+.std{
+   width: 15%;
+   border: 2px solid black;
+   float: right;
+   margin-bottom: 2%;
+   margin-right: 4%;
+   margin-top: 4%;
+}
+#section-2 {
+    background: rgba(0,0,0,0.5) url(cvsu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    margin-left: 10%;
+    width: 90%;
+    height: 300vh;
+    color: white;
+}
+.sec-content{
+   background-color: white;
+   margin-left: 11%;
+   width: 83%;
+   height: 280vh;
+   color: black;
+   padding-left: 2%;
+   font-size: 1vw;
+   font-weight: bold;
+}
+.sec-content h1{
+   font-size: 2vw;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.sec-content p{
+   margin-left: 11%;
+   font-family: Arial, Helvetica, sans-serif;
+   
+}
+.sec-content .sy{
+    text-align: center;
+    margin-right: 11%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+   width: 75%;
+   border-collapse: collapse;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1vw;
+   font-weight: 500;
+   margin-left: 11%;
+
+}
+table td, table th{
+   text-align: center;
+   padding: 3%, 4%;
+   border: 2px solid green;
+}
