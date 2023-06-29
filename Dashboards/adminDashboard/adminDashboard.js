@@ -46,6 +46,7 @@
               <td>${record.studentPassword}</td>
               <td>
                 <button type="button" class="btn btn-primary" onclick="editUser(${record.studentID})">Edit</button>
+                <button type="button" class="btn btn-danger" onclick="confirmDelete(${record.studentID})">Delete</button>
               </td>
             </tr>
           `
@@ -93,7 +94,66 @@
           alert('Failed to update the record');
         });
     };
-  
+
+
+// Define the delete function in the global scope
+window.confirmDelete = function (studentID) {
+  // Prompt for confirmation
+  if (confirm('Are you sure you want to delete this user?')) {
+    // Send the delete request to the server
+    fetch(`/recordsets/delete/${studentID}`, {
+      method: 'DELETE'
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        alert('User deleted successfully!');
+        fetchRecordsets(); // Fetch and update the recordsets in the table
+        $('#deleteModal').modal('hide'); // Hide the delete modal
+      })
+      .catch((error) => {
+        console.log(error);
+        alert('Failed to delete the user');
+      });
+  }
+};
+
+// Fetch recordsets on page load
+fetchRecordsets();
+
+function fetchRecordsets() {
+  // Fetch recordsets from the server
+  fetch('/recordsets')
+    .then((response) => response.json())
+    .then((data) => {
+      // Generate the table rows
+      const rows = data
+        .map(
+          (record) => `
+        <tr>
+          <td>${record.studentID}</td>
+          <td>${record.studentFirstName}</td>
+          <td>${record.studentLastName}</td>
+          <td>${record.YearLevelAndSection}</td>
+          <td>${record.studentEmail}</td>
+          <td>${record.studentPassword}</td>
+          <td>
+            <button type="button" class="btn btn-primary" onclick="editUser(${record.studentID})">Edit</button>
+            <button type="button" class="btn btn-danger" onclick="confirmDelete(${record.studentID})">Delete</button>
+          </td>
+        </tr>
+      `
+        )
+        .join('');
+
+      // Append the rows to the table body
+      document.querySelector('#Records tbody').innerHTML = rows;
+    })
+    .catch((error) => {
+      console.log(error);
+      alert('Failed to fetch recordsets');
+    });
+}
+
     // Fetch recordsets on page load
     fetchRecordsets();
 
