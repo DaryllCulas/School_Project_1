@@ -32,3 +32,4 @@ Package installation
 * npm install express body-parser
 * npm install tedious
 * npm install unixodbc
+* npm install path
