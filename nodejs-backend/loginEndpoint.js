@@ -131,7 +131,7 @@ router.get('/admin_profile_data', (req, res) => {
   });
 });
 
-// Endpoint for fetching student profile data
+// API Endpoint for fetching student profile data
 router.get('/student_profile_data', (req, res) => {
   if (!req.session.student) {
     return res.status(401).send('Unauthorized');
@@ -187,7 +187,7 @@ router.get('/recordsets', (req, res) => {
   });
 });
 
-// Update the endpoint for updating a record
+// API endpoint for updating a record
 router.put('/recordsets/update/:id', (req, res) => {
   const { id } = req.params;
   const { studentFirstName, studentLastName, YearLevelAndSection, studentEmail, studentPassword } = req.body;
@@ -229,6 +229,9 @@ router.put('/recordsets/update/:id', (req, res) => {
   });
 });
 
+
+// API endpoint for deleting a record
+
 router.delete('/recordsets/delete/:id', (req, res) => {
   const { id } = req.params;
 
@@ -259,6 +262,47 @@ router.delete('/recordsets/delete/:id', (req, res) => {
     });
   });
 });
+
+
+// API endpoint for adding a student record in registration form
+
+router.post('/recordsets/add', (req, res) => {
+  const { studentFirstName, studentLastName, YearLevelAndSection, studentEmail, studentPassword } = req.body;
+
+  const pool = new mssql.ConnectionPool(config);
+  pool.connect((err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send('Server error');
+    }
+
+    const request = new mssql.Request(pool);
+    const query = `
+      INSERT INTO ITstudent (studentFirstName, studentLastName, YearLevelAndSection, studentEmail, studentPassword)
+      VALUES (@studentFirstName, @studentLastName, @YearLevelAndSection, @studentEmail, @studentPassword);
+      SELECT SCOPE_IDENTITY() AS newStudentID;
+    `;
+
+    request.input('studentFirstName', mssql.NVarChar, studentFirstName);
+    request.input('studentLastName', mssql.NVarChar, studentLastName);
+    request.input('YearLevelAndSection', mssql.NVarChar, YearLevelAndSection);
+    request.input('studentEmail', mssql.NVarChar, studentEmail);
+    request.input('studentPassword', mssql.NVarChar, studentPassword);
+
+    request.query(query, (err, result) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send('Server error');
+      }
+
+      const newStudentID = result.recordset[0].newStudentID;
+      res.send(`Student added successfully! Student ID: ${newStudentID}`);
+    });
+  });
+});
+
+
+
 
 module.exports = router;
 
