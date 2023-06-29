@@ -13,6 +13,7 @@ This is school project only
 * git/github
 * Mssql image latest-2019 for docker container
 * VScode
+* Mozilla Firefox - for debugging browser
 
 
 ##### Personal Notes ####### 
