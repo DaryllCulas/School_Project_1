@@ -136,6 +136,7 @@
                 </ul>
               </div>
             </header>
+            </form>
     
       <!-- Sidebar Navigation -->
   <div class="sidebar" id="sidebar">
@@ -160,44 +161,46 @@
         <div class="user-details">
             <div class="input-box">
                 <span class="details">Student First Name</span>
-                <input id="studentfirstname" name="studentfirstname" type="text" placeholder="Enter your First Name" required>
+                <input id="studentFirstName" name="studentFirstName" type="text" placeholder="Enter your First Name" required>
             </div>
 
             <div class="input-box">
                 <span class="details">Student Last Name</span>
-                <input id="studentlastname" name="studentlastname" type="text" placeholder="Enter your Last Name" required>
+                <input id="studentLastName" name="studentLastName" type="text" placeholder="Enter your Last Name" required>
             </div>
 
-            <div class="input-box">
+            <!-- <div class="input-box">
                 <span class="details">Student ID</span>
-                <input id="studentid" name="studentid" type="text" placeholder="Enter your Student ID" required>
-            </div>
+                <input id="studentID" name="studentID" type="text" placeholder="Enter your Student ID" required>
+            </div> -->
 
             <div class="input-box">
                 <span class="details">Year and Level</span>
-                <input id="yearandlevel" name="yearandlevel" type="text" placeholder="Enter your Year & Level" required>
+                <input id="YearLevelAndSection" name="YearLevelAndSection" type="text" placeholder="Enter your Year & Level" required>
             </div>
 
             <div class="input-box">
                 <span class="details">Student Email</span>
-                <input id="studentemail" name="studentemail" type="email" placeholder="Enter your Email" required>
+                <input id="studentEmail" name="studentEmail" type="email" placeholder="Enter your Email" required>
             </div>
 
             <div class="input-box">
                 <span class="details">Student Password</span>
-                <input id="studentpassword" name="studentpassword" type="text" placeholder="Enter your Password" required>
+                <input id="studentPassword" name="studentPassword" type="text" placeholder="Enter your Password" required>
             </div>
         </div>
 
         <div class="button">
-            <input type="submit" value="Register">
+            <input type="button" value="Register">
         </div>
 
     </form>
 </div>
+
 <script src="../jquery-3.5.1.slim.min.js"></script>
 <script src="../popper.min.js"></script>
 <script src="../bootstrap.min.js"></script>
+<script src="../Student_Registration/studentRegistration.js"></script>
 <script>
   // Toggle sidebar on small screens
   const sidebar = document.getElementById('sidebar');
