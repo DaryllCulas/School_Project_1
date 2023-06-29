@@ -229,5 +229,38 @@ router.put('/recordsets/update/:id', (req, res) => {
   });
 });
 
+router.delete('/recordsets/delete/:id', (req, res) => {
+  const { id } = req.params;
+
+  const pool = new mssql.ConnectionPool(config);
+  pool.connect((err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send('Server error');
+    }
+
+    const request = new mssql.Request(pool);
+    const query = `
+      DELETE FROM ITstudent
+      WHERE studentID = @id
+    `;
+
+    request.input('id', mssql.NVarChar, id);
+
+    request.query(query, (err, result) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send('Server error');
+      }
+
+      // Return a success message or relevant data if needed
+      res.send('User deleted successfully!');
+
+    });
+  });
+});
 
 module.exports = router;
+
+
+
