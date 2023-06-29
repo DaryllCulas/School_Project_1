@@ -13,6 +13,7 @@ This is school project only
 * git/github
 * Mssql image latest-2019 for docker container
 * VScode
+* Mozilla Firefox - for debugging browser
 
 
 ##### Personal Notes ####### 
@@ -31,3 +32,4 @@ Package installation
 * npm install express body-parser
 * npm install tedious
 * npm install unixodbc
+* npm install path
