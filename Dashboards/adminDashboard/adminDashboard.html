@@ -6,7 +6,9 @@
   <title>School Admin Dashboard</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="./graphDashboard/CSS FILES/graph.css">
   <link rel="stylesheet" href="adminDashboard.css">
+ 
 </head>
 <body>
   <form action="/logout" method="GET">
@@ -47,7 +49,9 @@
     <!-- Content Area -->
 <div class="content">
   <h1>ADMIN DASHBOARD</h1>
-  <!-- Add your content here -->
+  <!-- Graphical chart in adminDashboard -->
+  <div id="chart_div"></div>
+
 
   <div id="Records" class="table-responsive">
     <table class="table table-striped">
@@ -125,6 +129,8 @@
 <script src ="adminDashboard.js"></script> 
 <!-------Axios JS-->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="./graphDashboard/JS FILES/loader.js"></script> 
+<script type= "text/javascript" src="./graphDashboard/JS FILES/graph.js"></script> 
 
 </body>
 </html>
