@@ -200,8 +200,7 @@ router.put('/recordsets/update/:id', (req, res) => {
     }
 
     const request = new mssql.Request(pool);
-    const query = `
-      UPDATE ITstudent
+    const query = `^\s@]+@[^\s@]+\.[^\s@]+
       SET studentFirstName = @studentFirstName,
           studentLastName = @studentLastName,
           YearLevelAndSection = @YearLevelAndSection,
