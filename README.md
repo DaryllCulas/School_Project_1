@@ -20,6 +20,7 @@ This is school project only
 * Container id used: ebd933936e22 (Azure data studio running by docker container)
 * Database used: Cvsu_ITS
 * Table used: ITstudent(student table)
+* Table used for admin role: adminFaculty (admin table)
 * Server used: localhost
 
 
