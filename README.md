@@ -9,7 +9,7 @@ This is school project only
 * NodeJS
 * Azure Data Studio
 * Docker container
-* Ubuntu OS
+* Ubuntu 22.04 - Desktop Environment
 * git/github
 * Mssql image latest-2019 for docker container
 * VScode
