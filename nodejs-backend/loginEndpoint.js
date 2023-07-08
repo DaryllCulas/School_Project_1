@@ -3,7 +3,6 @@ const mssql = require("mssql");
 const router = express.Router();
 const config = require("./serverConfiguration");
 const session = require("express-session");
-const path = require("path");
 
 // Configure express-session middleware
 router.use(
