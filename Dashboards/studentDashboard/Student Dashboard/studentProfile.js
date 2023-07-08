@@ -8,7 +8,7 @@ fetch('/student_profile_data')
     document.getElementById('studentFirstName').textContent = studentData.studentFirstName;
     document.getElementById('studentLastName').textContent = studentData.studentLastName;
     document.getElementById('YearLevelAndSection').textContent = studentData.YearLevelAndSection;
-    document.getElementById('studentEmail').textContent = studentData.studentEmail;
+    document.getElementById('studentEmail').textContent = studentData.studentEmail; 
     document.getElementById('studentPassword').textContent = studentData.studentPassword;
 })
 .catch((error) => console.log(error));
