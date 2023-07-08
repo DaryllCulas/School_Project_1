@@ -70,7 +70,7 @@
 <script src="../jquery-3.5.1.slim.min.js"></script>
 <script src="../popper.min.js"></script>
 <script src="../bootstrap.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
 <script>
   // Toggle sidebar on small screens
   const sidebar = document.getElementById('sidebar');
@@ -89,9 +89,15 @@
       document.getElementById('facultyFirstName').textContent = adminData.facultyFirstName;
       document.getElementById('facultyLastName').textContent = adminData.facultyLastName;
       document.getElementById('facultyEmail').textContent = adminData.facultyEmail;
-      document.getElementById('facultyPassword').textContent = adminData.facultyPassword;
+
+         // Hash the admin password using CryptoJS SHA-256 algorithm
+      const hashedPassword = CryptoJS.SHA256(adminData.facultyPassword).toString();
+      document.getElementById('facultyPassword').textContent = hashedPassword;    
+      // document.getElementById('facultyPassword').textContent = adminData.facultyPassword;
     })
     .catch((error) => console.log(error));
+
+
 </script>
 </body>
 </html>
