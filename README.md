@@ -1,9 +1,11 @@
 # CVSU-ITS Unofficial Website
 This is school project only
 
+# github repository & documentation: https://github.com/DaryllCulas/School_Project_1.git
+
 # Project Name: BSIT Student Profiling System
 
-This Unofficial Web System Application is exclusive for CVSU BSIT student in Bacoor Campus
+This is an Unofficial Web System Application is exclusive for CVSU BSIT student in Bacoor Campus
 
 Fork, then download or clone the repo.
 ```bash
