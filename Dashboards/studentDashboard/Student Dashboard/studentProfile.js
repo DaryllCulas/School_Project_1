@@ -9,6 +9,9 @@ fetch('/student_profile_data')
     document.getElementById('studentLastName').textContent = studentData.studentLastName;
     document.getElementById('YearLevelAndSection').textContent = studentData.YearLevelAndSection;
     document.getElementById('studentEmail').textContent = studentData.studentEmail; 
-    document.getElementById('studentPassword').textContent = studentData.studentPassword;
+
+    const hashedPassword = CryptoJS.SHA256(studentData.studentPassword).toString();
+    document.getElementById('studentPassword').textContent = hashedPassword;  
+    // document.getElementById('studentPassword').textContent = studentData.studentPassword;
 })
 .catch((error) => console.log(error));
