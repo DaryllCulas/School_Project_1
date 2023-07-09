@@ -27,27 +27,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function generateTableRows() {
     const rows = recordsets
-      .map(
-        (record) => `
-      <tr>
-        <td>${record.studentID}</td>
-        <td>${record.studentFirstName}</td>
-        <td>${record.studentLastName}</td>
-        <td>${record.YearLevelAndSection}</td>
-        <td>${record.studentEmail}</td>
-        <td>${record.studentPassword}</td>
-        <td>
-          <button type="button" class="btn btn-primary" onclick="editUser(${record.studentID})">Edit</button>
-          <button type="button" class="btn btn-danger" onclick="confirmDelete(${record.studentID})">Delete</button>
-        </td>
-      </tr>
-    `
-      )
+      .map((record) => {
+        // Hash the student password using CryptoJS
+        const hashedPassword = CryptoJS.SHA256(record.studentPassword).toString();
+  
+        return `
+          <tr>
+            <td>${record.studentID}</td>
+            <td>${record.studentFirstName}</td>
+            <td>${record.studentLastName}</td>
+            <td>${record.YearLevelAndSection}</td>
+            <td>${record.studentEmail}</td>
+            <td>${hashedPassword}</td>
+            <td>
+              <button type="button" class="btn btn-primary" onclick="editUser(${record.studentID})">Edit</button>
+              
+              <button type="button" class="btn btn-danger" onclick="confirmDelete(${record.studentID})">Delete</button>
+            </td>
+          </tr>
+        `;
+      })
       .join('');
-
+  
     // Append the rows to the table body
     document.querySelector('#Records tbody').innerHTML = rows;
   }
+  
 
   window.editUser = function (studentID) {
     const recordset = recordsets.find((record) => record.studentID === studentID);
