@@ -106,4 +106,8 @@ h1 {
 }
 #Records tbody tr:hover {
   background-color: yellowgreen;
+  border: 1px 1px solid black;
+}
+.btn-primary{
+  margin-bottom: 5px;
 }
