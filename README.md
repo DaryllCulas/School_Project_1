@@ -68,7 +68,8 @@ If you encounter any issues or errors during the installation or execution of th
 # Technologies used to develop this project
 * HTML
 * CSS
-* Javascript
+* Javascript - DOM, Jquery, Fetch API
+* ExpressJs
 * NodeJS
 * Azure Data Studio
 * Docker container
